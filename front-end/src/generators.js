@@ -1,4 +1,16 @@
 //Name Generator
+// const client = new MongoClient();
+// const db = "mongodb://localhost:27017";
+// const { MongoClient } = require("mongodb");
+// const Db = "mongodb://localhost:27017";
+
+// let mongo = require("mongodb")
+// let DB = "mongodb://localhost:27017";
+// mongo.MongoClient.connect(DB, function(err, db) {
+//   if (err) throw (err);
+//   console.log("databse created");
+//   db.close
+// },
 
 async function nameGenerator() {
   try {
@@ -23,4 +35,4 @@ async function nameGenerator() {
 }
 nameGenerator().catch(console.dir);
 
-export default nameGenerator();
+export default nameGenerator;
