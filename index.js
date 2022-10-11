@@ -1,39 +1,146 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
 const port = 5000;
 
-//Name Generator
-const client = new MongoClient();
-const db = "mongodb://localhost:27017";
-import MongoClient from "mongodb";
-const Db = "mongodb://localhost:27017";
+const MongoClient = require("mongodb").MongoClient;
 
-async function nameGenerator() {
-  try {
-    const database = client.db("Webapp_Project");
-    const nameDB = database.collection("Names");
-    const column = "Names";
+// Connect URL to MongoDB
+const url = "mongodb://localhost:27017";
 
-    const nameResult = await nameDB.aggregate([{ $sample: { size: 1 } }]);
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
-    // [];
-
-    for await (const doc of nameResult) {
-      console.log(doc.Names);
+// Connect to MongoDB
+MongoClient.connect(
+  url,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, MongoClient) => {
+    if (err) {
+      return console.log(err);
     }
 
-    //make a list variable then give that a name & then when we run the function we
-    //can call the function and it will reuse the result in the reactJS - USE EXPORT
-  } finally {
-    //this ensures that the client will close when you finish / when there's an error
-    await client.close();
-  }
-}
-nameGenerator().catch(console.dir);
+    // Specify the database you want to access
+    const db = MongoClient.db("Webapp_Project");
 
-export default nameGenerator;
+    console.log(`MongoDB Connected: ${url}`);
+  }
+);
 
 app.listen(port, () => console.log("Listening on port 5000"));
-// tom says use a fetch request to get this function from the database
+
+//Get request for Name Generator
+app.get("/name", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let name;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+
+      // Specify the database you want to access
+      const db = client.db("Webapp_Project");
+
+      console.log(`MongoDB Connected: ${url}`);
+      const namesCollection = db.collection("Names");
+      namesCollection.find().toArray(async (err, results) => {
+        const nameResult = await namesCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of nameResult) {
+          console.log("inside name function", doc.Names);
+          name = doc.Names;
+          res.send({ name: doc.Names });
+          Promise.resolve(doc.Names);
+        }
+      });
+    }
+  );
+});
+
+// get request for Race Generator
+app.get("/Race", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let name;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+
+      // Specify the database you want to access
+      const db = client.db("Webapp_Project");
+
+      console.log(`MongoDB Connected: ${url}`);
+      const racesCollection = db.collection("Races");
+      racesCollection.find().toArray(async (err, results) => {
+        const raceResult = await racesCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of raceResult) {
+          console.log("inside race function", doc.Race);
+          race = doc.Race;
+          res.send({ race: doc.Race });
+          Promise.resolve(doc.Race);
+        }
+      });
+    }
+  );
+});
+
+//Get request for Job Generator
+app.get("/job", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let name;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+
+      // Specify the database you want to access
+      const db = client.db("Webapp_Project");
+
+      console.log(`MongoDB Connected: ${url}`);
+      const jobsCollection = db.collection("JobTitles");
+      jobsCollection.find().toArray(async (err, results) => {
+        const jobResult = await jobsCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of jobResult) {
+          console.log("inside name function", doc.JobTitles);
+          job = doc.JobTitles;
+          res.send({ job: doc.JobTitles });
+          Promise.resolve(doc.JobTitles);
+        }
+      });
+    }
+  );
+});
