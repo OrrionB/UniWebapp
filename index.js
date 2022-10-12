@@ -1,8 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
-
 const port = 5000;
 
 const MongoClient = require("mongodb").MongoClient;
@@ -10,6 +8,7 @@ const MongoClient = require("mongodb").MongoClient;
 // Connect URL to MongoDB
 const url = "mongodb://localhost:27017";
 
+//CORS allows us to read packages from the API in the front end as they originate from a different server (3000 to 5000)
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -23,14 +22,13 @@ MongoClient.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
+  //This allows the console to return an error if there is an issue connecting
   (err, MongoClient) => {
     if (err) {
       return console.log(err);
     }
-
-    // Specify the database you want to access
     const db = MongoClient.db("Webapp_Project");
-
+    //The below line logs to the console in order to show it is connected to the DB.
     console.log(`MongoDB Connected: ${url}`);
   }
 );
@@ -77,7 +75,7 @@ app.get("/name", async (req, res) => {
 app.get("/Race", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let name;
+  let race;
   MongoClient.connect(
     url,
     {
@@ -88,8 +86,6 @@ app.get("/Race", async (req, res) => {
       if (err) {
         return console.log(err);
       }
-
-      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
       console.log(`MongoDB Connected: ${url}`);
@@ -113,7 +109,7 @@ app.get("/Race", async (req, res) => {
 app.get("/job", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let name;
+  let job;
   MongoClient.connect(
     url,
     {
@@ -124,8 +120,6 @@ app.get("/job", async (req, res) => {
       if (err) {
         return console.log(err);
       }
-
-      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
       console.log(`MongoDB Connected: ${url}`);
