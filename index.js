@@ -1,10 +1,14 @@
 const express = require("express");
+
 const cors = require("cors");
 const app = express();
 const port = 5000;
 
 const MongoClient = require("mongodb").MongoClient;
 
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
@@ -17,6 +21,57 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
+// fake password and username databasing for the time being
+const fakeData = {
+  tom: {
+    password: "cookie",
+  },
+  phil: {
+    password: "phil",
+  },
+  chloe: {
+    password: "fill",
+  },
+};
+
+//variables used in multiple functions, so have been placed outside to prevent block scoping issues
+let incorrectPassword = false;
+let userExistsInDb = false;
+
+const userIsValid = (requestUsername, fakeData, requestPassword) => {
+  // check if the request username exists in the DB
+  userExistsInDb = requestUsername in fakeData;
+  if (userExistsInDb) {
+    //it exists in the database
+    const user = fakeData[requestUsername];
+    if (user.password === requestPassword) {
+      incorrectPassword = false;
+      // the password is not incorrect
+      return true;
+    } else {
+      // the password inputted is incorrect
+      incorrectPassword = true;
+      return false;
+    }
+  } else {
+    //username inputted is incorrect
+    return false;
+  }
+  // validate the password
+};
+
+//  POST /login to verify customer details
+
+app.post("/login", (req, res) => {
+  const validUser = userIsValid(req.body.username, fakeData, req.body.password);
+  if (validUser) {
+    res.status(200).send({ response: "Authenticated" });
+  } else if (userExistsInDb != true) {
+    res.status(402).send({ response: "Incorrect Username" });
+  } else {
+    res.status(401).send({ response: "Incorrect Password" });
+  }
+});
 // fake password and username databasing for the time being
 const fakeData = {
   tom: {
