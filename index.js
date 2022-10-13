@@ -5,12 +5,9 @@ const port = 5000;
 
 const MongoClient = require("mongodb").MongoClient;
 
-<<<<<<< Updated upstream
-=======
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
->>>>>>> Stashed changes
 // Connect URL to MongoDB
 const url = "mongodb://localhost:27017";
 
@@ -20,8 +17,6 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-<<<<<<< Updated upstream
-=======
 // fake password and username databasing for the time being
 const fakeData = {
   tom: {
@@ -73,7 +68,6 @@ app.post("/login", (req, res) => {
     res.status(401).send({ response: "Incorrect Password" });
   }
 });
->>>>>>> Stashed changes
 
 // Connect to MongoDB
 MongoClient.connect(
