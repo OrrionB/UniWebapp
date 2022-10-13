@@ -16,7 +16,7 @@ function App() {
   //Allows dynamic HTML change based on different user input scenarios 
   const [userIsAuthenticated, setUserIsAuthenticated] = useState(false);
   const [incorrectPassword, setIncorrectPassword] = useState(false)
-  const [IncorrectUsername, setIncorrectUsername] = useState(false)
+  const [incorrectUsername, setIncorrectUsername] = useState(false)
   
     const username = data.username;
     const password = data.password
@@ -65,20 +65,11 @@ function App() {
     
 
   return (
-    <div>
+  <div>
     {/* If the correct information has been input, then the generator will appear */}
     {userIsAuthenticated && 
     <div>
     <h1> Welcome {username}</h1>
-      <div>
-        <Name />
-      </div>
-      <div>
-        <Race />
-      </div>
-      <div>
-        <Job />
-      </div>
       </div>}
 {/* if nothing has been input onto the page, then the password and username boxes will appear */}
  {!userIsAuthenticated && <form onSubmit= {handleSubmit}> 
@@ -89,7 +80,17 @@ function App() {
 {/* if an incorrect password has been input, then this prompt will appear */}
 {incorrectPassword && <p1> Your password is incorrect </p1>}
 {/* if an incorrect username has been input, then this prompt will */}
-{IncorrectUsername && <p1> Your username is incorrect </p1>}
+{incorrectUsername && <p1> Your username is incorrect </p1>}
+
+      <div>
+        <Name />
+      </div>
+      <div>
+        <Race />
+      </div>
+      <div>
+        <Job />
+      </div>
 
 
 </div>
