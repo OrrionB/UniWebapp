@@ -1,74 +1,86 @@
 const express = require("express");
 
 const cors = require("cors");
-
 const app = express();
-
 const port = 5000;
 
 const MongoClient = require("mongodb").MongoClient;
 
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const jobGenerator = require("./Generators/job-title");
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 // Connect URL to MongoDB
 const url = "mongodb://localhost:27017";
 
+//CORS allows us to read packages from the API in the front end as they originate from a different server (3000 to 5000)
 app.use(
   cors({
     origin: "http://localhost:3000",
   })
 );
+
+//  POST /login to verify customer details
+
+app.post("/login", (req, res) => {
+  const validUser = userIsValid(req.body.username, fakeData, req.body.password);
+  if (validUser) {
+    res.status(200).send({ response: "Authenticated" });
+  } else if (userExistsInDb != true) {
+    res.status(402).send({ response: "Incorrect Username" });
+  } else {
+    res.status(401).send({ response: "Incorrect Password" });
+  }
+});
 // fake password and username databasing for the time being
 const fakeData = {
-    tom: {
-        password: "cookie",
-    },
-    phil: {
-        password: "phil",
-    },
-    chloe: {
-        password: "fill",
-    },
+  tom: {
+    password: "cookie",
+  },
+  phil: {
+    password: "phil",
+  },
+  chloe: {
+    password: "fill",
+  },
 };
 
 //variables used in multiple functions, so have been placed outside to prevent block scoping issues
-let incorrectPassword = false
-let userExistsInDb = false
+let incorrectPassword = false;
+let userExistsInDb = false;
 
 const userIsValid = (requestUsername, fakeData, requestPassword) => {
   // check if the request username exists in the DB
- userExistsInDb = requestUsername in fakeData;
+  userExistsInDb = requestUsername in fakeData;
   if (userExistsInDb) {
     //it exists in the database
-      const user = fakeData[requestUsername]
-  if (user.password === requestPassword) {
-      incorrectPassword = false
+    const user = fakeData[requestUsername];
+    if (user.password === requestPassword) {
+      incorrectPassword = false;
       // the password is not incorrect
       return true;
-  } else {
-    // the password inputted is incorrect
-    incorrectPassword = true
-    return false;
-  }
+    } else {
+      // the password inputted is incorrect
+      incorrectPassword = true;
+      return false;
+    }
   } else {
     //username inputted is incorrect
-      return false;
+    return false;
   }
   // validate the password
 };
 
 //  POST /login to verify customer details
 
-app.post("/login", (req,res) => {
-  const validUser = userIsValid(req.body.username,fakeData, req.body.password);
-  if(validUser) {
-      res.status(200).send({ response: "Authenticated" })
-  } else if(userExistsInDb != true) {
-      res.status(402).send({ response: "Incorrect Username"})
+app.post("/login", (req, res) => {
+  const validUser = userIsValid(req.body.username, fakeData, req.body.password);
+  if (validUser) {
+    res.status(200).send({ response: "Authenticated" });
+  } else if (userExistsInDb != true) {
+    res.status(402).send({ response: "Incorrect Username" });
   } else {
-    res.status(401).send({ response: "Incorrect Password"})
-
+    res.status(401).send({ response: "Incorrect Password" });
   }
 });
 
@@ -79,14 +91,13 @@ MongoClient.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
+  //This allows the console to return an error if there is an issue connecting
   (err, MongoClient) => {
     if (err) {
       return console.log(err);
     }
-
-    // Specify the database you want to access
     const db = MongoClient.db("Webapp_Project");
-
+    //The below line logs to the console in order to show it is connected to the DB.
     console.log(`MongoDB Connected: ${url}`);
   }
 );
@@ -112,7 +123,6 @@ app.get("/name", async (req, res) => {
       // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const namesCollection = db.collection("Names");
       namesCollection.find().toArray(async (err, results) => {
         const nameResult = await namesCollection.aggregate([
@@ -133,7 +143,7 @@ app.get("/name", async (req, res) => {
 app.get("/Race", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let name;
+  let race;
   MongoClient.connect(
     url,
     {
@@ -144,8 +154,6 @@ app.get("/Race", async (req, res) => {
       if (err) {
         return console.log(err);
       }
-
-      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
       console.log(`MongoDB Connected: ${url}`);
@@ -200,5 +208,3 @@ app.get("/job", async (req, res) => {
     }
   );
 });
-
-

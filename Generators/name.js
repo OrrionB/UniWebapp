@@ -16,11 +16,8 @@ async function nameGenerator() {
       if (err) {
         return console.log(err);
       }
-
-      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const namesCollection = db.collection("Names");
       namesCollection.find().toArray(async (err, results) => {
         const nameResult = await namesCollection.aggregate([

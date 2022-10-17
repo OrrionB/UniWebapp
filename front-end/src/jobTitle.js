@@ -7,6 +7,7 @@ const Job = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    /* Prevent default stops the page refreshing on the submit of the button push */
     fetch("http://localhost:5000/job", {
       method: "GET",
     }).then((response) => {
@@ -16,6 +17,9 @@ const Job = (props) => {
       });
     });
   };
+  /* This is the return of the above, it takes the data that was pulled in the fetch request and puts it into the webpage
+  when you push the generate button */
+
   return (
     <div>
       <div>Your job is {job}</div>
@@ -29,4 +33,5 @@ const Job = (props) => {
   );
 };
 
-export default Job; /* the default that will export from this file */
+export default Job; /* the default that will export from this file - this can be referred to in the
+app.js file as Job and it will pull this function & button */

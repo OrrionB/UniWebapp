@@ -16,18 +16,15 @@ async function jobGenerator() {
       if (err) {
         return console.log(err);
       }
-
-      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const jobsCollection = db.collection("JobTitles");
       jobsCollection.find().toArray(async (err, results) => {
         const jobResult = await jobsCollection.aggregate([
           { $sample: { size: 1 } },
         ]);
         for await (const doc of jobResult) {
-          console.log("inside job function", doc.JobTitles); //this is the field name of the database collection
+          console.log("inside job function", doc.JobTitles);
           Promise.resolve(doc.JobTitles);
         }
       });
