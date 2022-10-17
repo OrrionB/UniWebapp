@@ -7,9 +7,9 @@ const Name = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    /* Prevent default stops the page refreshing on the submit of the button push */
     fetch("http://localhost:5000/name", {
-      //this is the address of the server where we want to post
-      method: "GET", // this is the method (ie post/get/delete)
+      method: "GET",
     }).then((response) => {
       response.json().then((json) => {
         console.log(json);

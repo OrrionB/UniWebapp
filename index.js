@@ -7,9 +7,7 @@ const port = 5000;
 const MongoClient = require("mongodb").MongoClient;
 
 const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
-const bodyParser = require("body-parser");
+const jobGenerator = require("./Generators/job-title");
 
 app.use(bodyParser.json());
 // Connect URL to MongoDB
@@ -21,44 +19,6 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-// fake password and username databasing for the time being
-const fakeData = {
-  tom: {
-    password: "cookie",
-  },
-  phil: {
-    password: "phil",
-  },
-  chloe: {
-    password: "fill",
-  },
-};
-
-//variables used in multiple functions, so have been placed outside to prevent block scoping issues
-let incorrectPassword = false;
-let userExistsInDb = false;
-
-const userIsValid = (requestUsername, fakeData, requestPassword) => {
-  // check if the request username exists in the DB
-  userExistsInDb = requestUsername in fakeData;
-  if (userExistsInDb) {
-    //it exists in the database
-    const user = fakeData[requestUsername];
-    if (user.password === requestPassword) {
-      incorrectPassword = false;
-      // the password is not incorrect
-      return true;
-    } else {
-      // the password inputted is incorrect
-      incorrectPassword = true;
-      return false;
-    }
-  } else {
-    //username inputted is incorrect
-    return false;
-  }
-  // validate the password
-};
 
 //  POST /login to verify customer details
 
@@ -163,7 +123,6 @@ app.get("/name", async (req, res) => {
       // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const namesCollection = db.collection("Names");
       namesCollection.find().toArray(async (err, results) => {
         const nameResult = await namesCollection.aggregate([
@@ -218,7 +177,7 @@ app.get("/Race", async (req, res) => {
 app.get("/job", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let job;
+  let name;
   MongoClient.connect(
     url,
     {
@@ -229,6 +188,8 @@ app.get("/job", async (req, res) => {
       if (err) {
         return console.log(err);
       }
+
+      // Specify the database you want to access
       const db = client.db("Webapp_Project");
 
       console.log(`MongoDB Connected: ${url}`);

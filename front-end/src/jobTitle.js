@@ -8,7 +8,6 @@ const Job = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     /* Prevent default stops the page refreshing on the submit of the button push */
-
     fetch("http://localhost:5000/job", {
       method: "GET",
     }).then((response) => {
