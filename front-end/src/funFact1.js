@@ -2,18 +2,18 @@ import React from "react";
 import "./App.css";
 import { useState } from "react";
 
-const Job = (props) => {
-  const [job, setJob] = useState("");
+const Fact = (props) => {
+  const [fact, setFact] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     /* Prevent default stops the page refreshing on the submit of the button push */
-    fetch("http://localhost:5000/job", {
+    fetch("http://localhost:5000/facts", {
       method: "GET",
     }).then((response) => {
       response.json().then((json) => {
         console.log(json);
-        setJob(json.job);
+        setFact(json.fact);
       });
     });
   };
@@ -22,17 +22,16 @@ const Job = (props) => {
 
   return (
     <div>
-      <div>Your character's job is {job}</div>
+      <div>Your character's 1st fun fact is: {fact}</div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate job"
+          value="Generate Fact 1"
         />
       </form><br></br>
     </div>
-    
   );
 };
 
-export default Job; /* the default that will export from this file - this can be referred to in the
+export default Fact; /* the default that will export from this file - this can be referred to in the
 app.js file as Job and it will pull this function & button */

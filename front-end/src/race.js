@@ -25,7 +25,7 @@ const Race = (props) => {
           type="submit"
           value="Generate Race"
         />
-      </form>
+      </form><br></br>
     </div>
   );
 };
