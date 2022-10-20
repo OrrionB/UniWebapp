@@ -22,14 +22,15 @@ const Job = (props) => {
 
   return (
     <div>
-      <div>Your job is {job}</div>
+      <div>Your character's job is {job}</div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
           value="Generate job"
         />
-      </form>
+      </form><br></br>
     </div>
+    
   );
 };
 

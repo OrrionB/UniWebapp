@@ -27,7 +27,7 @@ const Fact3 = (props) => {
           type="submit"
           value="Generate Fact 3"
         />
-      </form>
+      </form><br></br>
     </div>
   );
 };
