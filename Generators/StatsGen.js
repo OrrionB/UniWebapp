@@ -21,4 +21,4 @@ function roll() {
 console.log(stats); // this prints the array to the console.
 }
 
-roll();
+module.exports = roll;
