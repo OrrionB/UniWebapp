@@ -7,7 +7,6 @@ const port = 5000;
 const MongoClient = require("mongodb").MongoClient;
 
 const bodyParser = require("body-parser");
-const jobGenerator = require("./Generators/job-title");
 
 app.use(bodyParser.json());
 // Connect URL to MongoDB
@@ -129,7 +128,6 @@ app.get("/name", async (req, res) => {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of nameResult) {
-          console.log("inside name function", doc.Names);
           name = doc.Names;
           res.send({ name: doc.Names });
           Promise.resolve(doc.Names);
@@ -156,14 +154,12 @@ app.get("/Race", async (req, res) => {
       }
       const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const racesCollection = db.collection("Races");
       racesCollection.find().toArray(async (err, results) => {
         const raceResult = await racesCollection.aggregate([
           { $sample: { size: 1 } },
         ]);
         for await (const doc of raceResult) {
-          console.log("inside race function", doc.Race);
           race = doc.Race;
           res.send({ race: doc.Race });
           Promise.resolve(doc.Race);
@@ -177,7 +173,7 @@ app.get("/Race", async (req, res) => {
 app.get("/job", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let name;
+  let job;
   MongoClient.connect(
     url,
     {
@@ -189,20 +185,114 @@ app.get("/job", async (req, res) => {
         return console.log(err);
       }
 
-      // Specify the database you want to access
-      const db = client.db("Webapp_Project");
+         const db = client.db("Webapp_Project");
 
-      console.log(`MongoDB Connected: ${url}`);
       const jobsCollection = db.collection("JobTitles");
       jobsCollection.find().toArray(async (err, results) => {
         const jobResult = await jobsCollection.aggregate([
           { $sample: { size: 1 } },
         ]);
         for await (const doc of jobResult) {
-          console.log("inside name function", doc.JobTitles);
           job = doc.JobTitles;
           res.send({ job: doc.JobTitles });
           Promise.resolve(doc.JobTitles);
+        }
+      });
+    }
+  );
+});
+
+//Get request for FunFact1 Generator
+app.get("/facts", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let fact;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+      const db = client.db("Webapp_Project");
+
+      const factsCollection = db.collection("FunFacts");
+      factsCollection.find().toArray(async (err, results) => {
+        const factResult = await factsCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of factResult) {
+          fact = doc.FunFact;
+          res.send({ fact: doc.FunFact });
+          Promise.resolve(doc.FunFact);
+        }
+      });
+    }
+  );
+});
+
+
+//Get request for FunFact2 Generator
+app.get("/fact2", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let fact2;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+      const db = client.db("Webapp_Project");
+
+      const factsCollection = db.collection("FunFacts");
+      factsCollection.find().toArray(async (err, results) => {
+        const fact2Result = await factsCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of fact2Result) {
+          fact2 = doc.FunFact;
+          res.send({ fact2: doc.FunFact });
+          Promise.resolve(doc.FunFact);
+        }
+      });
+    }
+  );
+});
+
+//Get request for FunFact3 Generator
+app.get("/fact3", async (req, res) => {
+  const MongoClient = require("mongodb").MongoClient;
+  const url = "mongodb://127.0.0.1:27017";
+  let fact3;
+  MongoClient.connect(
+    url,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+      const db = client.db("Webapp_Project");
+
+      const factsCollection = db.collection("FunFacts");
+      factsCollection.find().toArray(async (err, results) => {
+        const fact3Result = await factsCollection.aggregate([
+          { $sample: { size: 1 } },
+        ]);
+        for await (const doc of fact3Result) {
+          fact3 = doc.FunFact;
+          res.send({ fact3: doc.FunFact });
+          Promise.resolve(doc.FunFact);
         }
       });
     }
