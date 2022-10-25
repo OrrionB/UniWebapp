@@ -25,7 +25,7 @@ const Fact2 = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate Fact 2"
+          value="Generate"
         />
       </form><br></br>
     </div>

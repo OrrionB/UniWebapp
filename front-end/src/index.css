@@ -8,6 +8,12 @@ body {
   text-align: center;
 }
 
+header {
+  background-color: #04a795;
+  display: block;
+  height: 10%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -19,4 +25,10 @@ input[type="submit" i] {
   border-radius: 25px;
   border-style: hidden;
   padding: 5px;
+}
+
+footer {
+  background-color: #fb5947;
+  display: block;
+  height: 5%;
 }

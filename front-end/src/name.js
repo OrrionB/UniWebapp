@@ -23,7 +23,7 @@ const Name = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate name"
+          value="Generate"
         />
       </form><br></br>
     </div>

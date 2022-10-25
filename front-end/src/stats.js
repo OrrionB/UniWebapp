@@ -29,7 +29,7 @@ return (
         <form onSubmit={handleSubmit}>
             <input
             type = "submit"
-            value = "Generate Stats"
+            value = "Generate"
             />
         </form><br></br>
         </div>

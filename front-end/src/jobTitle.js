@@ -26,7 +26,7 @@ const Job = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate job"
+          value="Generate"
         />
       </form><br></br>
     </div>

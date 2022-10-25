@@ -23,7 +23,7 @@ const Race = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate Race"
+          value="Generate"
         />
       </form><br></br>
     </div>
