@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d33"
+  },
+  "Race": "Elf"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d34"
+  },
+  "Race": "Half-Elf"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d35"
+  },
+  "Race": "Half-Orc"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d36"
+  },
+  "Race": "Human"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d37"
+  },
+  "Race": "Tiefling"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d38"
+  },
+  "Race": "Dragonborn"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d39"
+  },
+  "Race": "Dwarf"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d3a"
+  },
+  "Race": "Gnome"
+},{
+  "_id": {
+    "$oid": "6336f34f00c89678fed20d3b"
+  },
+  "Race": "Halfling"
+}]
