@@ -38,5 +38,18 @@ footer {
 h1 {
   padding: 0.05%;
   margin: 0.05%;
-  
+}
+
+h3 {
+  padding: 0.6%;
+  margin: 0.05%;
+  font-size: 2;
+  font-weight: 2;
+  border-color: #630d6f;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: thin;
+  margin-block: auto;
+  margin-inline: auto;
+  width: fit-content;
 }

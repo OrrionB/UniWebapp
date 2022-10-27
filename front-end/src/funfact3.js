@@ -21,7 +21,7 @@ const Fact3 = (props) => {
 
   return (
     <div>
-      <div><h1>Your character's 3rd fun fact is: </h1><br/> {fact3}</div>
+      <div><h1>Your character's 3rd fun fact is: </h1><br/> <h3>{fact3}</h3></div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
