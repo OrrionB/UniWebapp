@@ -10,6 +10,7 @@ import Stats from "./stats"
 
 import { useState } from "react";
 
+
 //This allows user input to effect the page in real time
 function App() {
   const [data, setData] = useState({
@@ -106,6 +107,9 @@ function App() {
       </div>
       <div>
         <Stats />
+      </div>
+      <div>
+        <footer></footer>
       </div>
 
 

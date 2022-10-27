@@ -19,13 +19,13 @@ const Race = (props) => {
   };
   return (
     <div>
-      <div>Your race is: {race}</div>
+      <div><h1>Your race is: </h1><br/> {race}</div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
-          value="Generate Race"
+          value="Generate"
         />
-      </form><br></br>
+      </form><br/>
     </div>
   );
 };

@@ -6,6 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  padding: 0.05%;
+}
+
+header {
+  background-color: #04a795;
+  display: block;
+  height: 10%;
 }
 
 code {
@@ -19,4 +26,17 @@ input[type="submit" i] {
   border-radius: 25px;
   border-style: hidden;
   padding: 5px;
+  margin: 0.55%;
+}
+
+footer {
+  background-color: #fb5947;
+  display: block;
+  height: 5%;
+}
+
+h1 {
+  padding: 0.05%;
+  margin: 0.05%;
+  
 }
