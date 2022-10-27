@@ -302,16 +302,19 @@ app.get("/fact3", async (req, res) => {
 //Get Request for Stats
 app.get("/stats", async (req, res) => {
   let rolls = [];
-  let stats = []
+  let stats = [];
   for (let i = 0; i < 6; i++){
+    rolls = []
 // Done six times to get all six stats
   for (let i = 0; i < 4; i++) 
   // Four dice 6 sided dice rolled 
   {
-    let diceSix = Math.round(Math.random() * 6) + 1; // the 6 sided dice is rolled
+    let diceSix = Math.floor(Math.random() * 6) + 1; // the 6 sided dice is rolled
     rolls.push(diceSix); //each dice roll is added to an array
   }
-  let fourOrganisedRolls = rolls.sort().shift(); // the array is organised from lowest to highest, and then the smallest is removed 
+  let fourOrganisedRolls = []
+  fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed 
+  console.log(rolls)
   const initialValue = 0; 
   let sumWithInitial = 0;
   sumWithInitial = rolls.reduce(
