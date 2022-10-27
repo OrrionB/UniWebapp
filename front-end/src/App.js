@@ -6,9 +6,8 @@ import Fact from "./funFact1";
 import Fact2 from "./funfact2";
 import Fact3 from "./funfact3";
 import Stats from "./stats"
-import Login from "/login"
+import Login from "./login"
 // import logo from "../public/Images/logo/LogoGenPCDiceShadow-removebg-preview.png";
-import { useState } from "react";
 
 
 //This allows user input to effect the page in real time
