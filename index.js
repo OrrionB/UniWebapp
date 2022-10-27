@@ -302,8 +302,9 @@ app.get("/fact3", async (req, res) => {
 //Get Request for Stats
 app.get("/stats", async (req, res) => {
   let rolls = [];
-  let stats = []
+  let stats = [];
   for (let i = 0; i < 6; i++){
+    rolls = []
 // Done six times to get all six stats
   for (let i = 0; i < 4; i++) 
   // Four dice 6 sided dice rolled 

@@ -6,7 +6,7 @@ import Fact from "./funFact1";
 import Fact2 from "./funfact2";
 import Fact3 from "./funfact3";
 import Stats from "./stats"
-
+import Login from "/login"
 
 import { useState } from "react";
 
@@ -106,6 +106,9 @@ function App() {
       </div>
       <div>
         <Stats />
+      </div>
+      <div>
+        <Login />
       </div>
 
 
