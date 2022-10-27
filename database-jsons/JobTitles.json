@@ -1,0 +1,1231 @@
+[{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69843"
+  },
+  "JobTitles": "Actor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69844"
+  },
+  "JobTitles": "Animal Handler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69845"
+  },
+  "JobTitles": "Archer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69846"
+  },
+  "JobTitles": "Armorer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69847"
+  },
+  "JobTitles": "Astrologer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69848"
+  },
+  "JobTitles": "Barbarian"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69849"
+  },
+  "JobTitles": "Barkeep"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984a"
+  },
+  "JobTitles": "Beer Seller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984b"
+  },
+  "JobTitles": "Boatman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984c"
+  },
+  "JobTitles": "Brewer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984d"
+  },
+  "JobTitles": "Brigand"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984e"
+  },
+  "JobTitles": "Builder"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6984f"
+  },
+  "JobTitles": "Carpenter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69850"
+  },
+  "JobTitles": "Charioteer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69851"
+  },
+  "JobTitles": "Chieftain"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69852"
+  },
+  "JobTitles": "Clerk"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69853"
+  },
+  "JobTitles": "Cobbler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69854"
+  },
+  "JobTitles": "Cook"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69855"
+  },
+  "JobTitles": "Costermonger"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69856"
+  },
+  "JobTitles": "Courtier"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69857"
+  },
+  "JobTitles": "Cutler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69858"
+  },
+  "JobTitles": "Dancer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69859"
+  },
+  "JobTitles": "Distiller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985a"
+  },
+  "JobTitles": "Doctor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985b"
+  },
+  "JobTitles": "Eunuch"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985c"
+  },
+  "JobTitles": "Fighter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985d"
+  },
+  "JobTitles": "Footman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985e"
+  },
+  "JobTitles": "Gardener"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6985f"
+  },
+  "JobTitles": "Gladiator"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69860"
+  },
+  "JobTitles": "Grocer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69861"
+  },
+  "JobTitles": "Guildmaster"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69862"
+  },
+  "JobTitles": "Hay merchant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69863"
+  },
+  "JobTitles": "Herald"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69864"
+  },
+  "JobTitles": "Hermit"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69865"
+  },
+  "JobTitles": "Housemaid"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69866"
+  },
+  "JobTitles": "Infantryman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69867"
+  },
+  "JobTitles": "Inventor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69868"
+  },
+  "JobTitles": "Jeweler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69869"
+  },
+  "JobTitles": "King"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986a"
+  },
+  "JobTitles": "Laborer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986b"
+  },
+  "JobTitles": "Leatherworker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986c"
+  },
+  "JobTitles": "Locksmith"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986d"
+  },
+  "JobTitles": "Lord"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986e"
+  },
+  "JobTitles": "Man at Arms"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6986f"
+  },
+  "JobTitles": "Mayor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69870"
+  },
+  "JobTitles": "Messenger"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69871"
+  },
+  "JobTitles": "Miner"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69872"
+  },
+  "JobTitles": "Monk"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69873"
+  },
+  "JobTitles": "Musician"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69874"
+  },
+  "JobTitles": "Nun"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69875"
+  },
+  "JobTitles": "Page"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69876"
+  },
+  "JobTitles": "Pastry cook"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69877"
+  },
+  "JobTitles": "Philosopher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69878"
+  },
+  "JobTitles": "Pilgrim"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69879"
+  },
+  "JobTitles": "Potter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987a"
+  },
+  "JobTitles": "Privateer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987b"
+  },
+  "JobTitles": "Pursemaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987c"
+  },
+  "JobTitles": "Ratcatcher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987d"
+  },
+  "JobTitles": "Roofer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987e"
+  },
+  "JobTitles": "Rugmaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6987f"
+  },
+  "JobTitles": "Sailor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69880"
+  },
+  "JobTitles": "Sculptor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69881"
+  },
+  "JobTitles": "Scrivener"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69882"
+  },
+  "JobTitles": "Shaman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69883"
+  },
+  "JobTitles": "Shoemaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69884"
+  },
+  "JobTitles": "Slaver"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69885"
+  },
+  "JobTitles": "Sorcerer/Sorceress"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69886"
+  },
+  "JobTitles": "Stablehand"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69887"
+  },
+  "JobTitles": "Storyteller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69888"
+  },
+  "JobTitles": "Street seller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69889"
+  },
+  "JobTitles": "Surgeon"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988a"
+  },
+  "JobTitles": "Sycophant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988b"
+  },
+  "JobTitles": "Tavernkeeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988c"
+  },
+  "JobTitles": "Teamster"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988d"
+  },
+  "JobTitles": "Tinker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988e"
+  },
+  "JobTitles": "Toymaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6988f"
+  },
+  "JobTitles": "Vermin catcher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69890"
+  },
+  "JobTitles": "Vintner"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69891"
+  },
+  "JobTitles": "Warrior"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69892"
+  },
+  "JobTitles": "Wetnurse"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69893"
+  },
+  "JobTitles": "Wizard"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69894"
+  },
+  "JobTitles": "Wood seller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69895"
+  },
+  "JobTitles": "Advocate (Lawyer)"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69896"
+  },
+  "JobTitles": "Apothecary"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69897"
+  },
+  "JobTitles": "Archivist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69898"
+  },
+  "JobTitles": "Artisan"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69899"
+  },
+  "JobTitles": "Baker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989a"
+  },
+  "JobTitles": "Barber"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989b"
+  },
+  "JobTitles": "Barmaid"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989c"
+  },
+  "JobTitles": "Beggar"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989d"
+  },
+  "JobTitles": "Bookbinder"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989e"
+  },
+  "JobTitles": "Bricklayer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6989f"
+  },
+  "JobTitles": "Brothel Keeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a0"
+  },
+  "JobTitles": "Butcher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a1"
+  },
+  "JobTitles": "Cartographer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a2"
+  },
+  "JobTitles": "Chatelaine"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a3"
+  },
+  "JobTitles": "Chirurgeon"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a4"
+  },
+  "JobTitles": "Clock Maker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a5"
+  },
+  "JobTitles": "Commander"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a6"
+  },
+  "JobTitles": "Cooper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a7"
+  },
+  "JobTitles": "Counselor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a8"
+  },
+  "JobTitles": "Cowherd"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698a9"
+  },
+  "JobTitles": "Daimyo"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698aa"
+  },
+  "JobTitles": "Dictator"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ab"
+  },
+  "JobTitles": "Diver"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ac"
+  },
+  "JobTitles": "Domestic Servant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ad"
+  },
+  "JobTitles": "Explorer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ae"
+  },
+  "JobTitles": "Fisherman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698af"
+  },
+  "JobTitles": "Furrier"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b0"
+  },
+  "JobTitles": "Geisha"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b1"
+  },
+  "JobTitles": "Glovemaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b2"
+  },
+  "JobTitles": "Groom"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b3"
+  },
+  "JobTitles": "Harness maker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b4"
+  },
+  "JobTitles": "Healer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b5"
+  },
+  "JobTitles": "Herbalist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b6"
+  },
+  "JobTitles": "Highwayman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b7"
+  },
+  "JobTitles": "Hunter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b8"
+  },
+  "JobTitles": "Innkeeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698b9"
+  },
+  "JobTitles": "Jailer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ba"
+  },
+  "JobTitles": "Jongleur"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698bb"
+  },
+  "JobTitles": "Kitchen drudge"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698bc"
+  },
+  "JobTitles": "Lady"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698bd"
+  },
+  "JobTitles": "Librarian"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698be"
+  },
+  "JobTitles": "Longbowman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698bf"
+  },
+  "JobTitles": "Maidservant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c0"
+  },
+  "JobTitles": "Mason"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c1"
+  },
+  "JobTitles": "Mercer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c2"
+  },
+  "JobTitles": "Midwife"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c3"
+  },
+  "JobTitles": "Minister"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c4"
+  },
+  "JobTitles": "Mortician"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c5"
+  },
+  "JobTitles": "Necromancer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c6"
+  },
+  "JobTitles": "Nurse"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c7"
+  },
+  "JobTitles": "Painter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c8"
+  },
+  "JobTitles": "Peasant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698c9"
+  },
+  "JobTitles": "Physician"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ca"
+  },
+  "JobTitles": "Pirate"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698cb"
+  },
+  "JobTitles": "Priestess"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698cc"
+  },
+  "JobTitles": "Professor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698cd"
+  },
+  "JobTitles": "Queen"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ce"
+  },
+  "JobTitles": "Reeve"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698cf"
+  },
+  "JobTitles": "Ropemaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d0"
+  },
+  "JobTitles": "Ruler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d1"
+  },
+  "JobTitles": "Samurai"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d2"
+  },
+  "JobTitles": "Scavenger"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d3"
+  },
+  "JobTitles": "Seamstress"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d4"
+  },
+  "JobTitles": "Shepherd"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d5"
+  },
+  "JobTitles": "Silversmith"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d6"
+  },
+  "JobTitles": "Smith"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d7"
+  },
+  "JobTitles": "Spice Merchant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d8"
+  },
+  "JobTitles": "Stevedore"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698d9"
+  },
+  "JobTitles": "Steward"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698da"
+  },
+  "JobTitles": "Street sweeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698db"
+  },
+  "JobTitles": "Surveyor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698dc"
+  },
+  "JobTitles": "Tailor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698dd"
+  },
+  "JobTitles": "Tax collector"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698de"
+  },
+  "JobTitles": "Thatcher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698df"
+  },
+  "JobTitles": "Torturer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e0"
+  },
+  "JobTitles": "Trapper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e1"
+  },
+  "JobTitles": "Veterinarian"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e2"
+  },
+  "JobTitles": "Viking"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e3"
+  },
+  "JobTitles": "Water carrier"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e4"
+  },
+  "JobTitles": "Wine seller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e5"
+  },
+  "JobTitles": "Woodcarver"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e6"
+  },
+  "JobTitles": "Wrestler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e7"
+  },
+  "JobTitles": "Alchemist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e8"
+  },
+  "JobTitles": "Architect"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698e9"
+  },
+  "JobTitles": "Aristocrat"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ea"
+  },
+  "JobTitles": "Artist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698eb"
+  },
+  "JobTitles": "Banker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ec"
+  },
+  "JobTitles": "Bard"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ed"
+  },
+  "JobTitles": "Beekeeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ee"
+  },
+  "JobTitles": "Blacksmith"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ef"
+  },
+  "JobTitles": "Bookseller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f0"
+  },
+  "JobTitles": "Brick Maker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f1"
+  },
+  "JobTitles": "Buckle Maker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f2"
+  },
+  "JobTitles": "Caravan Leader"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f3"
+  },
+  "JobTitles": "Chandler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f4"
+  },
+  "JobTitles": "Chef"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f5"
+  },
+  "JobTitles": "Clergyman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f6"
+  },
+  "JobTitles": "Clothworker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f7"
+  },
+  "JobTitles": "Concubine"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f8"
+  },
+  "JobTitles": "Copyist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698f9"
+  },
+  "JobTitles": "Courtesan"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698fa"
+  },
+  "JobTitles": "Crossbowman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698fb"
+  },
+  "JobTitles": "Dairymaid"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698fc"
+  },
+  "JobTitles": "Diplomat"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698fd"
+  },
+  "JobTitles": "Diviner"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698fe"
+  },
+  "JobTitles": "Emperor/Empress"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc698ff"
+  },
+  "JobTitles": "Farmer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69900"
+  },
+  "JobTitles": "Fishmonger"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69901"
+  },
+  "JobTitles": "Galley Slave"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69902"
+  },
+  "JobTitles": "General"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69903"
+  },
+  "JobTitles": "Goldsmith"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69904"
+  },
+  "JobTitles": "Guardsman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69905"
+  },
+  "JobTitles": "Hatmaker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69906"
+  },
+  "JobTitles": "Hearthwitch"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69907"
+  },
+  "JobTitles": "Herder"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69908"
+  },
+  "JobTitles": "Historian"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69909"
+  },
+  "JobTitles": "Illuminator"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990a"
+  },
+  "JobTitles": "Interpreter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990b"
+  },
+  "JobTitles": "Jester"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990c"
+  },
+  "JobTitles": "Judge"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990d"
+  },
+  "JobTitles": "Knight"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990e"
+  },
+  "JobTitles": "Lady in Waiting"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6990f"
+  },
+  "JobTitles": "Linguist"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69910"
+  },
+  "JobTitles": "Longshoreman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69911"
+  },
+  "JobTitles": "Majordomo"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69912"
+  },
+  "JobTitles": "Masseur"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69913"
+  },
+  "JobTitles": "Merchant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69914"
+  },
+  "JobTitles": "Miller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69915"
+  },
+  "JobTitles": "Minstrel"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69916"
+  },
+  "JobTitles": "Mourner"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69917"
+  },
+  "JobTitles": "Noble"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69918"
+  },
+  "JobTitles": "Old-clothes seller"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69919"
+  },
+  "JobTitles": "Pariah"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991a"
+  },
+  "JobTitles": "Perfumer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991b"
+  },
+  "JobTitles": "Pigkeeper"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991c"
+  },
+  "JobTitles": "Plasterer"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991d"
+  },
+  "JobTitles": "Princess"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991e"
+  },
+  "JobTitles": "Escort"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6991f"
+  },
+  "JobTitles": "Ranger"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69920"
+  },
+  "JobTitles": "Ronin"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69921"
+  },
+  "JobTitles": "Royal Adviser"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69922"
+  },
+  "JobTitles": "Saddler"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69923"
+  },
+  "JobTitles": "Scabbard maker"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69924"
+  },
+  "JobTitles": "Scholar"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69925"
+  },
+  "JobTitles": "Servant"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69926"
+  },
+  "JobTitles": "Ship's captain"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69927"
+  },
+  "JobTitles": "Slave"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69928"
+  },
+  "JobTitles": "Soldier"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69929"
+  },
+  "JobTitles": "Squire"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992a"
+  },
+  "JobTitles": "Stonemason"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992b"
+  },
+  "JobTitles": "Street kid"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992c"
+  },
+  "JobTitles": "Student"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992d"
+  },
+  "JobTitles": "Swordsman"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992e"
+  },
+  "JobTitles": "Tanner"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc6992f"
+  },
+  "JobTitles": "Teacher"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69930"
+  },
+  "JobTitles": "Thief"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69931"
+  },
+  "JobTitles": "Town crier"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69932"
+  },
+  "JobTitles": "Vendor"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69933"
+  },
+  "JobTitles": "Village chief"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69934"
+  },
+  "JobTitles": "Warlock"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69935"
+  },
+  "JobTitles": "Weaver"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69936"
+  },
+  "JobTitles": "Witch"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69937"
+  },
+  "JobTitles": "Woodcutter"
+},{
+  "_id": {
+    "$oid": "63440cb9980b8da4dbc69938"
+  },
+  "JobTitles": "Writer"
+}]
