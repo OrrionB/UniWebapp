@@ -19,19 +19,19 @@ const Stats = (props) => {
 return (
     <div> 
         <div className="stats"> 
-        <span id="header"> Your Stats are: </span><br></br>
-        <span>STR: {stat[0]}</span><br></br>
-                <span>DEX: {stat[1]}</span><br></br>
-                <span>CON: {stat[2]}</span><br></br>
-                <span>INT: {stat[3]}</span><br></br>
-                <span>WIS: {stat[4]}</span><br></br>
-                <span>CHR: {stat[5]}</span><br></br>
+        <span id="header"> <h1>Your Stats are: </h1></span>
+        <span>STR: {stat[0]}</span><br/>
+                <span>DEX: {stat[1]}</span><br/>
+                <span>CON: {stat[2]}</span><br/>
+                <span>INT: {stat[3]}</span><br/>
+                <span>WIS: {stat[4]}</span><br/>
+                <span>CHR: {stat[5]}</span><br/>
         <form onSubmit={handleSubmit}>
             <input
             type = "submit"
             value = "Generate"
             />
-        </form><br></br>
+        </form><br/>
         </div>
        </div>
   );

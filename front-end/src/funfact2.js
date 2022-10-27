@@ -21,13 +21,13 @@ const Fact2 = (props) => {
 
   return (
     <div>
-      <div>Your character's 2nd fun fact is: {fact2}</div>
+      <div><h1>Your character's 2nd fun fact is: </h1><br/> {fact2}</div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"
           value="Generate"
         />
-      </form><br></br>
+      </form><br/>
     </div>
   );
 };
