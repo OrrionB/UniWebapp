@@ -19,7 +19,7 @@ const Name = (props) => {
   };
   return (
     <div><br></br>
-      <div><h1>Your name is: </h1><br/> {name}</div>
+      <div><h1>Your name is: </h1><br/> <h3>{name}</h3></div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"

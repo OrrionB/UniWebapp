@@ -5,8 +5,8 @@ import Job from "./jobTitle";
 import Fact from "./funFact1";
 import Fact2 from "./funfact2";
 import Fact3 from "./funfact3";
-import Stats from "./stats"
-
+import Stats from "./stats";
+// import logo from "../public/Images/logo/LogoGenPCDiceShadow-removebg-preview.png";
 
 import { useState } from "react";
 
