@@ -72,5 +72,8 @@ Our application allows users to generate a fantasy character sheet upon which th
 
 ## Work Approach
 ### Agile Methodology - Scrum with Kanban
-- We agreed on this way of working as a team because our organisation follows agile methodologies while leaving teams room to adapt their ways of working. Scrum with Kanban allows us the freedom to pick up tickets as necessary without having to rigidly stick to cerimonies involved in the Scrum way of working. This in turn allowed us the flexibility to work around our daily work routines and commitments.  
+- We agreed on this way of working as a team because our organisation follows agile methodologies while leaving teams room to adapt their ways of working. Scrum with Kanban allows us the freedom to pick up tickets as necessary without having to rigidly stick to ceremonies involved in the Scrum way of working. This in turn allowed us the flexibility to work around our daily work routines and commitments.  
 We came up with MoSCow statements (must have, should have, could have, would have) to lead our priorities. Each team member can claim any ticket and is then responsible for completing the work on that ticket. 
+
+### Ceremonies of work
+We have 1 scrum a week due to the time each person can allocate to the project, this allows some progress to be made towards each ticket between daily scrums and makes the meetings more substatial to extract the maximum value out of the time. The team also held a retrospective at the half way point in the project (October) in order to assess what had gone well so far, what hadn't gone well, and what can we do as individuals and as a team to improve our performance and delivery.
