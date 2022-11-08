@@ -1,4 +1,3 @@
-import "./App.css";
 import Name from "./name";
 import Race from "./race";
 import Job from "./jobTitle";
