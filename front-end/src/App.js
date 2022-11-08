@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-       <div>
+       <div id="loginSection">
         <Login />
       </div>
       <div>
