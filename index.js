@@ -1,5 +1,4 @@
 const express = require("express");
-
 const cors = require("cors");
 const app = express();
 const port = 5000;
@@ -19,18 +18,6 @@ app.use(
   })
 );
 
-//  POST /login to verify customer details
-
-app.post("/login", (req, res) => {
-  const validUser = userIsValid(req.body.username, fakeData, req.body.password);
-  if (validUser) {
-    res.status(200).send({ response: "Authenticated" });
-  } else if (userExistsInDb != true) {
-    res.status(402).send({ response: "Incorrect Username" });
-  } else {
-    res.status(401).send({ response: "Incorrect Password" });
-  }
-});
 // fake password and username databasing for the time being
 const fakeData = {
   tom: {
@@ -69,6 +56,7 @@ const userIsValid = (requestUsername, fakeData, requestPassword) => {
   }
   // validate the password
 };
+
 
 //  POST /login to verify customer details
 
