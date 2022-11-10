@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GenPC Home</title>
-    <link rel="stylesheet" href="mystyle.css">
-  </head>
-  <body>
-    <nav id="navBar">
-      <img src="Images/logo/LogoGenPCDiceShadow-removebg-preview.png" height="50px">
-      <img src="Images/logo/LogoGenPCTextPurpleOShadow-removebg-preview.png" height="50px">
-    </nav>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- <div>
+import React from 'react';
+
+function Home() {
+    return (
+        <div>
+             {/* <div>
       <div id="aboutSection">
         <h1 id="aboutTitle">About GenPC:</h1>
         <p id="aboutPara">GenPC is designed to help you create fantasy characters. Whether these characters are NPC's or the basis for 
@@ -25,11 +15,10 @@
       <form action="https://google.com">
         <input type="submit" value="I'm ready!" />
     </form>
-    </div> -->
-    <div id="root"></div>
-    <div id="footer">
-      <p>Authors: Orrion Barnett, Isaac Crawford, Hope Maloney</br>
-      For issues: https://github.com/OrrionB/UniWebapp </p>
-    </div>
-  </body>
-</html>
+    </div>  */}
+    <h1>hi</h1>
+        </div>
+    );
+}
+
+export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Login = (props) => {
+const LoginFunction = (props) => {
   //
   // return (
   //
@@ -95,4 +95,4 @@ const Login = (props) => {
   );
 };
 
-export default Login; /* the default that will export from this file */
+export default LoginFunction; /* the default that will export from this file */
