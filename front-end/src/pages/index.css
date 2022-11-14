@@ -51,7 +51,7 @@ h3 {
   width: fit-content;
 }
 
-#navBar {
+#headerBar {
   background-color: #04a795;
   width:100%;
   position: sticky;
@@ -63,6 +63,14 @@ h3 {
   flex-direction: row;
   /* justify-content: space-between; */
 }
+
+nav li {
+  display: none;
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+
 
 #aboutSection {
   margin: 2%;
@@ -158,7 +166,7 @@ p {
       width: fit-content;
     }
     
-    #navBar {
+    #headerBar {
       background-color: #04a795;
       width:100%;
       position: sticky;
