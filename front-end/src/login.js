@@ -63,7 +63,7 @@ const LoginFunction = (props) => {
 
   return (
     <div>
-      <h1> login </h1>
+      <h1>Login</h1>
       {/* If the correct information has been input, then the generator will appear */}
       {userIsAuthenticated && (
         <div>

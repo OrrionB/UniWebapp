@@ -7,6 +7,7 @@ import Home from './pages/homepage';
 import LoginPage from './pages/loginpage';
 import GenPage from './pages/generatorpage';
 import NoPage from './pages/NoPage';
+import './pages/index.css';
 
 export default function App () {
   console.log("etest")

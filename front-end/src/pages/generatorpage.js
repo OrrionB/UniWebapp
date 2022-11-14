@@ -11,9 +11,7 @@ function GenPage() {
 
     return (
       <div>
-        <h1>hello</h1>
         <div>
-        
           <Name />
         </div>
         <div>
@@ -33,9 +31,6 @@ function GenPage() {
         </div>
         <div>
           <Stats />
-        </div>
-        <div>
-          <footer></footer>
         </div>
   
   </div>

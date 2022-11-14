@@ -4,7 +4,7 @@
 This readme assumes that you have the following programmes installed:
 - IDE e.g. VS Code
 - MongoDB Compass
-- Node
+- Node (version 18.9.0)
 
 This ReadMe has been made in a .md format so it can be opened in your IDE previewer for easier reading.
 
