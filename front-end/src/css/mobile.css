@@ -25,11 +25,11 @@ body {
     margin: 0.55%;
   }
   
-  .footer {
+  #footer {
     background-color: #fb5947;
     display: block;
     height: 5%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width:100%;
   }
@@ -76,5 +76,9 @@ body {
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+  }
+  
+  h2 {
+    margin: 0px;
   }
 }

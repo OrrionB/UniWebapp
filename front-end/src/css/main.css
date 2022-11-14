@@ -27,7 +27,7 @@ input[type="submit" i] {
   background-color: #fb5947;
   display: block;
   height: 5%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width:100%;
 }
@@ -65,7 +65,7 @@ h3 {
 }
 
 #aboutSection {
-  margin: 5%;
+  margin: 2%;
   border-color: #efdec6;
   border-style: solid;
   border-radius: 25px;
@@ -76,3 +76,23 @@ h3 {
   flex-direction: column;
 }
 
+#loginSection {
+  margin: 2%;
+  border-color: #efdec6;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: thick;
+  box-shadow: 2px 2px 5px #fb5947;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutTitle {
+  margin-bottom: 0;
+}
+
+#aboutPara {
+  margin-left: 4px;
+  margin-right: 4px;
+}
