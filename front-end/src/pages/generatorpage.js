@@ -1,10 +1,11 @@
-import Name from "./name";
-import Race from "./race";
-import Job from "./jobTitle";
-import Fact from "./funFact1";
-import Fact2 from "./funfact2";
-import Fact3 from "./funfact3";
-import Stats from "./stats"
+import React from 'react';
+import Name from "../name";
+import Race from "../race";
+import Job from "../jobTitle";
+import Fact from "../funFact1";
+import Fact2 from "../funfact2";
+import Fact3 from "../funfact3";
+import Stats from "../stats"
 
 function GenPage() {
 
@@ -30,9 +31,6 @@ function GenPage() {
         </div>
         <div>
           <Stats />
-        </div>
-        <div>
-          <footer></footer>
         </div>
   
   </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Login = (props) => {
+const LoginFunction = (props) => {
   //
   // return (
   //
@@ -63,7 +63,7 @@ const Login = (props) => {
 
   return (
     <div>
-      <h1> login </h1>
+      <h1>Login</h1>
       {/* If the correct information has been input, then the generator will appear */}
       {userIsAuthenticated && (
         <div>
@@ -95,4 +95,4 @@ const Login = (props) => {
   );
 };
 
-export default Login; /* the default that will export from this file */
+export default LoginFunction; /* the default that will export from this file */
