@@ -10,7 +10,7 @@ import Stats from "../stats"
 function GenPage() {
 
     return (
-      <div>
+      <div id="genDiv">
         <div>
           <Name />
         </div>
