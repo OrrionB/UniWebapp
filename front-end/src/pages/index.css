@@ -14,6 +14,15 @@ input[type="submit" i] {
   margin: 0.55%;
 }
 
+#error {
+  padding:70px;
+}
+
+#genDiv {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 #footer {
   background-color: #fb5947;
   display: block;
@@ -41,6 +50,15 @@ h3 {
   margin-block: auto;
   margin-inline: auto;
   width: fit-content;
+}
+
+input {
+  margin:2px;
+  margin-top: 6px;
+}
+
+#logInBox {
+  padding:4px;
 }
 
 #headerBar {
@@ -140,7 +158,6 @@ nav ul li a {
   
   h1 {
     padding: 0.05%;
-    margin: 0.05%;
   }
   
   h3 {
@@ -163,20 +180,26 @@ nav ul li a {
     position: sticky;
     position: fixed;
     top: 0;
-    padding: 5px;
-    height: 70px;
+    padding: 2px;
+    margin: 0px;
+    height: 58px;
     display: flex;
     flex-direction: row;
-    justify-content:left;
+    align-items: center;
+    padding-left: 17%;
+    padding-bottom: 17px;
+  }
+  #logos {
+    position: relative;
+    align-items:center;
   }
   
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     list-style-type: none;
-    position: fixed;
     top: -100px;
+    right: 21%;
   }
   
   li {
@@ -219,5 +242,11 @@ nav ul li a {
   #aboutPara {
     margin-left: 4px;
     margin-right: 4px;
+  }
+  #genDiv {
+    padding-top: 55px;
+    padding-bottom: 35px;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
   }
 }

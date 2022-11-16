@@ -62,35 +62,37 @@ const LoginFunction = (props) => {
   };
 
   return (
-    <div>
+    <div id="logInBox">
       <h1>Login</h1>
       {/* If the correct information has been input, then the generator will appear */}
       {userIsAuthenticated && (
         <div>
-          <h1> Welcome {username}</h1>
+          <h1> Welcome {username}!</h1>
         </div>
       )}
       {!userIsAuthenticated && (
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={handleChange}
-          />
+          /> 
           <input
             type="password"
+            placeholder="Password"
             name="password"
             value={password}
             onChange={handleChange}
-          />
+          /> 
           <input type="submit" name="submit" />
         </form>
       )}
        {/* if an incorrect password has been input, then this prompt will appear */}
-       {incorrectPassword && <p1> Your password is incorrect </p1>}
+       {incorrectPassword && <p1> Sorry, your password is incorrect. Please try again. </p1>}
       {/* if an incorrect username has been input, then this prompt will */}
-      {incorrectUsername && <p1> Your username is incorrect </p1>}
+      {incorrectUsername && <p1> Sorry, your username is incorrect. Please try again. </p1>}
     </div>
   );
 };

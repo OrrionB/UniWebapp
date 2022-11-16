@@ -21,7 +21,7 @@ return (
         <Route path="Login" element={<LoginPage/>} />
         <Route path="Generator" element={<GenPage/>} />
         {/* <Route path="SignUp" element={<SignUpPage/>} /> */}
-        <Route path="*" element={<NoPage />} />
+        <Route path="*" element={<NoPage/>} />
       </Route>
     </Routes>
     </BrowserRouter>
