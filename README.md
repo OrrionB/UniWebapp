@@ -16,7 +16,7 @@ This ReadMe was written using the built-in terminal in VS Code. It was tested us
 
 1. Open a terminal on MacOS or PowerShell on Windows.  
 
-2. Navigate to the folder where you want the application to be stored on your computer.  
+2. Navigate (cd) to the folder where you want the application to be stored on your computer.  
 > i.e. `$ cd Desktop/Webapp`  
 
 3. Clone the repo into this folder from this link --> (https://github.com/OrrionB/UniWebapp.git) 
@@ -24,9 +24,9 @@ This ReadMe was written using the built-in terminal in VS Code. It was tested us
   
  4. Open the folder in VS Code. 
   
-4. Install the dependencies  
+5. To install the dependencies: 
 - Open 2 terminals in VSCode  
-- In the first termnial window navigate to the folder where you installed the webapp and run the command `npm install`.  
+- In the first termnial window navigate (cd) to the folder where you installed the webapp and run the command `npm install`.  
 > i.e `$ cd Desktop/Webapp`  
 >
 >`$ npm install`  
@@ -40,6 +40,8 @@ This ReadMe was written using the built-in terminal in VS Code. It was tested us
 
 ## Creating the Database
 
+***Please ensure that the database name and collections names you create exactly match those below.***
+
 Open MongoDB Compass 
 
 Create a Database on `localhost:27017` in MongoDB Compass called **`Webapp_Project`**.  
@@ -50,7 +52,7 @@ In **Webapp_Project** please create the following collections:
 3. **`Names`**
 4. **`Races`**  
   
-  Into these collections, you can import the corresponding JSON file from the **`database-jsons`** folder that was included in the repo.
+  Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo.
 
 ---
 
@@ -59,6 +61,7 @@ In **Webapp_Project** please create the following collections:
 2. In the terminal window that is in the directory where you cloned the app, run the command `node index.js`.
 3. In the terminal window that is in the **front-end** folder, run the command `npm start`.
 4. The app should then initialise, however if it does not - go to 'http://localhost:3000' in your browser.
+5. Enjoy generating your character!
 
 ---
 ## Development Team
@@ -108,4 +111,7 @@ The applications main functions are:
 This application is being developed as a mobile first application. The website will function in a PC browswer, however there will be slight differences in the style, such as the placement and positioning of the navbar. 
 
 ## Application Security
-As we are utilising a sign up / login system we need to protect against bad actors gaining access to the underlying data. In order to do this we have implemented the following:
+As we are utilising a sign up / login system we need to protect against bad actors gaining access to the underlying data. In order to do this we have implemented the following:  
+- Sessions
+- Hashed Passwords
+----
