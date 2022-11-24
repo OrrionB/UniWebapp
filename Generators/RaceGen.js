@@ -27,7 +27,6 @@ async function raceGenerator() {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of raceResult) {
-          console.log("inside races function", doc.Race);
           Promise.resolve(doc.Race);
         }
       });

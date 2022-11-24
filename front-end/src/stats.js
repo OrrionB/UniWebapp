@@ -10,8 +10,7 @@ const Stats = (props) => {
             method: "GET",
     }).then((response) => { 
         response.json().then((json) => {
-            console.log(json);
-            setStats(json);
+         setStats(json);
         });
     });
 };

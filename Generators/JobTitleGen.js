@@ -24,7 +24,6 @@ async function jobGenerator() {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of jobResult) {
-          console.log("inside job function", doc.JobTitles);
           Promise.resolve(doc.JobTitles);
         }
       });
