@@ -1,17 +1,17 @@
-// import React from 'react';
-// import SignUp from "../login"
+import React from 'react';
+import SignUp from "../signup"
 
-// function SignUpPage() {
+function SignUpPage() {
 
-//     return (
-//       <div>
-//          <div id="SignUpSection">
-//           <SignUp />
-//         </div>
+    return (
+      <div>
+         <div id="SignUpSection">
+          <SignUp />
+        </div>
 
-//         </div>
+        </div>
 
-// );
-// }
+);
+}
 
-// export default SignUpPage;
+export default SignUpPage;

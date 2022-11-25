@@ -12,27 +12,12 @@ nextYear.setFullYear(current.getFullYear() + 1);
 
 
 const LoginFunction = (props) => {
-// fixes use state bug that takes cookie data as a string instead of a boolean
-let authorised = cookies.get('authorised')
-if (authorised === 'false'){
-  authorised = false}
 
-if (authorised === 'true'){
-  authorised = true
-}
-
-
-  
   const [data, setData] = useState({
     username: "",
     password: "",
   });
- 
-  // sets state if user has logged in previously or not
-  const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
-  //sets state based on incorrect passwords and usernames
-  const [incorrectPassword, setIncorrectPassword] = useState(false);
-  const [incorrectUsername, setIncorrectUsername] = useState(false);
+
 
 // updates password and usename data as they are typed
   const username = data.username;
@@ -56,7 +41,7 @@ if (authorised === 'true'){
   // submits data to the back end
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/login", {
+    fetch("http://localhost:5000/signUp", {
       // mode: 'no-cors',
       method: "POST",
       headers: { "Content-Type": "application/json" ,
@@ -64,32 +49,32 @@ if (authorised === 'true'){
       },
       body: JSON.stringify(data)
       // if it recieves a response, the local cookies are set to be authorised, and the username is set here as well
-    }).then((response) => {
-      cookies.set('authorised', true, { path: '/' , maxAge: 28800, httpOnly: false});
-      cookies.set('username', data.username, {path: '/' , maxAge: 28800, httpOnly: false} )
-      setUserIsAuthenticated(true);
-      }
-    )}
-//  when the log out button is pressed, the authorised cookie is removed
-    const logout = () => {
-      cookies.set('authorised', false, { path: '/', maxAge: 28800, httpOnly: false})
-      setUserIsAuthenticated(false)
-      authorised = false
-    }
+    }).then((response) => {console.log(response)})}
+//       cookies.set('authorised', true, { path: '/' , maxAge: 28800, httpOnly: false});
+//       cookies.set('username', data.username, {path: '/' , maxAge: 28800, httpOnly: false} )
+//       setUserIsAuthenticated(true);
+//       }
+//     )}
+// //  when the log out button is pressed, the authorised cookie is removed
+//     const logout = () => {
+//       cookies.set('authorised', false, { path: '/', maxAge: 28800, httpOnly: false})
+//       setUserIsAuthenticated(false)
+//       authorised = false
+    
 
   return (
     
-    <div id="logInBox">
+    <div id="SignUpBox">
       {/* <button onClick={sessionCheck}>validate me</button> */}
-      <h1>Login</h1>
+      <h1>Sign Up</h1>
       {/* If the correct information has been input, then the generator will appear */}
-      {userIsAuthenticated && (
+      {(
         <div>
           <h1> Welcome {cookies.get('username')}!</h1>
-          <button onClick={logout}> logout </button>
+          <button > logout </button>
         </div>
       )}
-      {!userIsAuthenticated && (
+      {(
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -108,10 +93,6 @@ if (authorised === 'true'){
           <input type="submit" name="submit" />
         </form>
       )}
-       {/* if an incorrect password has been input, then this prompt will appear */}
-       {incorrectPassword && <p1> Sorry, your password is incorrect. Please try again. </p1>}
-      {/* if an incorrect username has been input, then this prompt will */}
-      {incorrectUsername && <p1> Sorry, your username is incorrect. Please try again. </p1>}
     </div>
   );
 };

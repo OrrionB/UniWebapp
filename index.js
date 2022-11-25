@@ -4,6 +4,7 @@ const app = express();
 const port = 5000;
 const path = require("path")
 const bcrypt = require("bcrypt");
+const saltRounds = 10
 
 const MongoClient = require("mongodb").MongoClient;
 
@@ -64,7 +65,6 @@ MongoClient.connect(
     res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
     res.header('Access-Control-Allow-Methods: POST');
     res.header('Access-Control-Allow-Credentials: true')
-    console.log(req.sessionID)
     let username = req.body.username;
     let password = req.body.password;
     app
@@ -92,7 +92,6 @@ MongoClient.connect(
                   req.session.save(function (err) {
                   if (err) return next(err)
                   res.send(true) 
-                  console.log(req.sessionID)
                   })
                 
             }
@@ -101,6 +100,64 @@ MongoClient.connect(
       });
   
       });
+
+      app.post("/signUp",  express.urlencoded({ extended: false }), function (req, res) {
+        res.header("Access-Control-Allow-Origin", '*');
+        res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+        res.header('Access-Control-Allow-Methods: POST');
+        res.header('Access-Control-Allow-Credentials: true')
+        let username = req.body.username;
+        bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
+        let hashedPwd = hash;
+        let newUser = { name: username, password: hashedPwd };
+        app
+          .set("Webapp_Project")
+          .collection("users")
+          .find({ Username: username })
+          .toArray(function (err, docs)
+          { 
+            console.log(docs)
+            if (docs.length === 0){
+          app
+          .get("Webapp_Project")
+          .collection("users")
+          .insertOne(newUser, function (err, dbResp){
+          if (err) {
+            console.error(err);
+          } 
+          if (dbResp.insertedCount === 1) {
+            res.send('success');
+            console.log('not a duplicate')
+          }else {console.log(dbResp)
+            console.log(dbResp.insertedCount)
+            res.send('failed')
+          console.log('is a duplicate')
+          }
+            })} else {if (err) {
+                console.error(err);
+              }if (docs.length > 0) {
+                console.log('this user already exists')
+                }}})})})
+    //     app
+    //       .get("Webapp_Project")
+    //       .collection("users")
+    //       .insertOne(newUser, function (err, dbResp){
+    //       if (err) {
+    //         console.error(err);
+    //       } 
+    //       if (dbResp.insertedCount === 1) {
+    //         res.send('success');
+    //         console.log('not a duplicate')
+    //       }else {console.log(dbResp)
+    //         console.log(dbResp.insertedCount)
+    //         res.send('failed')
+    //       console.log('is a duplicate')
+    //       }
+          
+    //       }
+    //       )
+    //   })
+    // })
 
 
 //variables used in multiple functions, so have been placed outside to prevent block scoping issues
