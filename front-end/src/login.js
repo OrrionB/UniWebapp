@@ -12,6 +12,7 @@ nextYear.setFullYear(current.getFullYear() + 1);
 
 
 const LoginFunction = (props) => {
+  console.log(cookies.get('authorised'))
 // fixes use state bug that takes cookie data as a string instead of a boolean
 let authorised = cookies.get('authorised')
 if (authorised === 'false'){
