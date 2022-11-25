@@ -10,7 +10,6 @@ const Fact2 = (props) => {
       method: "GET",
     }).then((response) => {
       response.json().then((json) => {
-        console.log(json);
         setFact2(json.fact2);
       });
     });

@@ -24,7 +24,6 @@ async function nameGenerator() {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of nameResult) {
-          console.log("inside name function", doc.Names);
           Promise.resolve(doc.Names);
         }
       });

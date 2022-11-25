@@ -11,7 +11,6 @@ const Job = (props) => {
       method: "GET",
     }).then((response) => {
       response.json().then((json) => {
-        console.log(json);
         setJob(json.job);
       });
     });

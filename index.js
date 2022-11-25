@@ -302,7 +302,6 @@ app.get("/stats", async (req, res) => {
   }
   let fourOrganisedRolls = []
   fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed 
-  console.log(rolls)
   const initialValue = 0; 
   let sumWithInitial = 0;
   sumWithInitial = rolls.reduce(
