@@ -46,11 +46,12 @@ Open MongoDB Compass
 
 Create a Database on `localhost:27017` in MongoDB Compass called **`Webapp_Project`**.  
 
-In **Webapp_Project** please create the following collections:  
+In **Webapp_Project** please create the following collections:  (All start with capital letters, except for users, which starts with a lower case).
 1. **`FunFacts`**
 2. **`JobTitles`**
 3. **`Names`**
 4. **`Races`**  
+5. **`users`**
   
   Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo.
 
