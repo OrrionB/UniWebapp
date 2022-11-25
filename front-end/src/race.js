@@ -11,7 +11,6 @@ const Race = (props) => {
       method: "GET", // this is the method (ie post/get/delete)
     }).then((response) => {
       response.json().then((json) => {
-        console.log(json);
         setRace(json.race);
       });
     });

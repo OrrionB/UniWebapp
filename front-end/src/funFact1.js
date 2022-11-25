@@ -11,8 +11,7 @@ const Fact = (props) => {
       method: "GET",
     }).then((response) => {
       response.json().then((json) => {
-        console.log(json);
-        setFact(json.fact);
+           setFact(json.fact);
       });
     });
   };

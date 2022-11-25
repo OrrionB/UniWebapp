@@ -361,8 +361,7 @@ app.get("/stats", async (req, res) => {
     rolls.push(diceSix); //each dice roll is added to an array
   }
   let fourOrganisedRolls = []
-  fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed 
-  // console.log(rolls)
+  fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed
   const initialValue = 0; 
   let sumWithInitial = 0;
   sumWithInitial = rolls.reduce(
