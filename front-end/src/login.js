@@ -1,24 +1,43 @@
+
 import React from "react";
 import { useState } from "react";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+// setting time frame for cookie expiry
+const current = new Date();
+const nextYear = new Date();
+nextYear.setFullYear(current.getFullYear() + 1);
+
+
+
 
 const LoginFunction = (props) => {
-  //
-  // return (
-  //
-  //   );
+// fixes use state bug that takes cookie data as a string instead of a boolean
+let authorised = cookies.get('authorised')
+if (authorised === 'false'){
+  authorised = false}
+
+if (authorised === 'true'){
+  authorised = true
+}
+
+
+  
   const [data, setData] = useState({
     username: "",
     password: "",
   });
-
-  const [userIsAuthenticated, setUserIsAuthenticated] = useState(false);
+ 
+  // sets state if user has logged in previously or not
+  const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
+  //sets state based on incorrect passwords and usernames
   const [incorrectPassword, setIncorrectPassword] = useState(false);
   const [incorrectUsername, setIncorrectUsername] = useState(false);
 
+// updates password and usename data as they are typed
   const username = data.username;
   const password = data.password;
-  // This applies form input to cross refernce with stored user data
-  //username
+ 
   const handleChange = (event) => {
     if (event.target.name === "username") {
       setData({
@@ -34,40 +53,40 @@ const LoginFunction = (props) => {
     }
   };
 
+  // submits data to the back end
   const handleSubmit = (event) => {
     event.preventDefault();
-    let responseCode;
     fetch("http://localhost:5000/login", {
+      // mode: 'no-cors',
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" ,
+      withCredentials: true
+      },
+      body: JSON.stringify(data)
+      // if it recieves a response, the local cookies are set to be authorised, and the username is set here as well
     }).then((response) => {
-      console.log("response", response);
-      responseCode = response.status;
-      if (responseCode === 200) {
-        setUserIsAuthenticated(true);
-        setIncorrectPassword(false);
-        setIncorrectUsername(false);
-      } else {
-        setUserIsAuthenticated(false);
-        if (responseCode === 402) {
-          setIncorrectUsername(true);
-          setIncorrectPassword(false);
-        } else {
-          setIncorrectPassword(true);
-          setIncorrectUsername(false);
-        }
+      cookies.set('authorised', true, { path: '/' , expires: nextYear, httpOnly: false});
+      cookies.set('username', data.username, {path: '/' , expires: nextYear, httpOnly: false} )
+      setUserIsAuthenticated(true);
       }
-    });
-  };
+    )}
+//  when the log out button is pressed, the authorised cookie is removed
+    const logout = () => {
+      cookies.set('authorised', false, { path: '/', expires: nextYear, httpOnly: false})
+      setUserIsAuthenticated(false)
+      authorised = false
+    }
 
   return (
+    
     <div id="logInBox">
+      {/* <button onClick={sessionCheck}>validate me</button> */}
       <h1>Login</h1>
       {/* If the correct information has been input, then the generator will appear */}
       {userIsAuthenticated && (
         <div>
-          <h1> Welcome {username}!</h1>
+          <h1> Welcome {cookies.get('username')}!</h1>
+          <button onClick={logout}> logout </button>
         </div>
       )}
       {!userIsAuthenticated && (

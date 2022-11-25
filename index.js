@@ -2,10 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const port = 5000;
+const path = require("path")
+const bcrypt = require("bcrypt");
 
 const MongoClient = require("mongodb").MongoClient;
 
 const bodyParser = require("body-parser");
+
+app.listen(port, () => console.log("Listening on port 5000"));
 
 app.use(bodyParser.json());
 // Connect URL to MongoDB
@@ -14,33 +18,101 @@ const url = "mongodb://localhost:27017";
 //CORS allows us to read packages from the API in the front end as they originate from a different server (3000 to 5000)
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: '*',
+    credentials: true,
   })
 );
 
-// fake password and username databasing for the time being
-const fakeData = {
-  tom: {
-    password: "cookie",
-  },
-  phil: {
-    password: "phil",
-  },
-  chloe: {
-    password: "fill",
-  },
-};
+//  POST /login to verify customer details
+
+const sessions = require("express-session");
+const MongoStore = require("connect-mongo")(sessions)
+
+// Basic usage
+// this gives out the session to people
+const oneDay = 1000 * 60 * 60 * 24
+
+// this adds a session which is available for one day, which can collect and send data through to the front end 
+app.use(sessions({
+  secret: "someTopSecret",
+  store: new MongoStore({
+  url: "mongodb://127.0.0.1:27017/myTestSession",}),
+  cookie: { 
+    maxAge: oneDay,
+    httpOnly: false,
+    secure: false 
+    },
+  resave: true,
+  saveUninitialized: false,
+  SameSite:false
+  })
+  )
+  
+  
+// this connects our project top MongoDB, where our data is storred
+MongoClient.connect(
+  "mongodb://127.0.0.1:27017",
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  function(err, client) {
+    app.set("Webapp_Project", client.db("Webapp_Project"));
+  }
+);
+
+//  POST /login to verify customer details
+  app.post("/login",  express.urlencoded({ extended: false }), function (req, res) {
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    res.header('Access-Control-Allow-Methods: POST');
+    res.header('Access-Control-Allow-Credentials: true')
+    console.log(req.sessionID)
+    let username = req.body.username;
+    let password = req.body.password;
+    app
+      .set("Webapp_Project")
+      .collection("users")
+      .find({ Username: username })
+      .toArray(function (err, docs)
+      {
+        if (err) {
+          console.error(err);
+        }
+        if (docs.length > 0) {
+          
+          
+          ///////
+          bcrypt.compare(req.body.password, docs[0].Password, function (
+            err,
+            result
+          ) {
+            if (req.body.password == docs[0].Password){
+                req.session.cookie.user = req.body.username
+                  let authorised = true
+                  req.session.cookie.authorised = true
+                  let frontendSession = req.session
+                  req.session.save(function (err) {
+                  if (err) return next(err)
+                  res.send(true) 
+                  console.log(req.sessionID)
+                  })
+                
+            }
+          });
+        } 
+      });
+  
+      });
+
 
 //variables used in multiple functions, so have been placed outside to prevent block scoping issues
 let incorrectPassword = false;
 let userExistsInDb = false;
 
-const userIsValid = (requestUsername, fakeData, requestPassword) => {
+const userIsValid = (requestUsername, requestPassword) => {
   // check if the request username exists in the DB
-  userExistsInDb = requestUsername in fakeData;
+  userExistsInDb = requestUsername in realData;
   if (userExistsInDb) {
     //it exists in the database
-    const user = fakeData[requestUsername];
+    const user = realData[requestUsername];
     if (user.password === requestPassword) {
       incorrectPassword = false;
       // the password is not incorrect
@@ -58,18 +130,6 @@ const userIsValid = (requestUsername, fakeData, requestPassword) => {
 };
 
 
-//  POST /login to verify customer details
-
-app.post("/login", (req, res) => {
-  const validUser = userIsValid(req.body.username, fakeData, req.body.password);
-  if (validUser) {
-    res.status(200).send({ response: "Authenticated" });
-  } else if (userExistsInDb != true) {
-    res.status(402).send({ response: "Incorrect Username" });
-  } else {
-    res.status(401).send({ response: "Incorrect Password" });
-  }
-});
 
 // Connect to MongoDB
 MongoClient.connect(
@@ -89,10 +149,11 @@ MongoClient.connect(
   }
 );
 
-app.listen(port, () => console.log("Listening on port 5000"));
+
 
 //Get request for Name Generator
 app.get("/name", async (req, res) => {
+  
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
   let name;
@@ -278,7 +339,6 @@ app.get("/fact3", async (req, res) => {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of fact3Result) {
-          fact3 = doc.FunFact;
           res.send({ fact3: doc.FunFact });
           Promise.resolve(doc.FunFact);
         }
@@ -301,7 +361,7 @@ app.get("/stats", async (req, res) => {
     rolls.push(diceSix); //each dice roll is added to an array
   }
   let fourOrganisedRolls = []
-  fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed 
+  fourOrganisedRolls.push(rolls.sort().shift()); // the array is organised from lowest to highest, and then the smallest is removed
   const initialValue = 0; 
   let sumWithInitial = 0;
   sumWithInitial = rolls.reduce(
@@ -312,4 +372,4 @@ app.get("/stats", async (req, res) => {
 }
 res.send(stats)
 });
- 
+
