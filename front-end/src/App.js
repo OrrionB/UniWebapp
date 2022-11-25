@@ -9,7 +9,12 @@ import Stats from "./stats"
 import Login from "./login"
 import User from "./user"
 // import logo from "../public/Images/logo/LogoGenPCDiceShadow-removebg-preview.png";
-
+  
+//   const instance = axios.create({
+//     withCredentials: true,
+//     baseURL: BASE_URL
+//  })
+//  instance.get('/todos')
 
 //This allows user input to effect the page in real time
 function App() {

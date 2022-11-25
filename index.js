@@ -9,13 +9,11 @@ const MongoClient = require("mongodb").MongoClient;
 
 const bodyParser = require("body-parser");
 
+app.listen(port, () => console.log("Listening on port 5000"));
+
 app.use(bodyParser.json());
 // Connect URL to MongoDB
 const url = "mongodb://localhost:27017";
-
-app.listen(port, () => console.log("Listening on port 5000"));
-
-
 
 //CORS allows us to read packages from the API in the front end as they originate from a different server (3000 to 5000)
 app.use(
@@ -25,12 +23,7 @@ app.use(
   })
 );
 
-
 //  POST /login to verify customer details
-
-
-
-
 
 const sessions = require("express-session");
 const MongoStore = require("connect-mongo")(sessions)
