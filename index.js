@@ -73,25 +73,25 @@ MongoClient.connect(
       .find({ Username: username })
       .toArray(function (err, docs)
       {
-        if (err) {
-          console.error(err);
+        console.error(err)
+        if (docs.length === 0) {
+          res.send({'response':'wrong username'});
         }
         if (docs.length > 0) {
-          
-          
           ///////
-          bcrypt.compare(req.body.password, docs[0].Password, function (
+          bcrypt.compare(req.body.password, docs[0].password, function (
             err,
             result
-          ) {
-            if (req.body.password == docs[0].Password){
+          ) { 
+            if (!result) {res.send({'response':'wrong password'})} 
+            else {
                 req.session.cookie.user = req.body.username
                   let authorised = true
                   req.session.cookie.authorised = true
                   let frontendSession = req.session
                   req.session.save(function (err) {
                   if (err) return next(err)
-                  res.send(true) 
+                  res.send({'response':'log in successful'}) 
                   })
                 
             }
@@ -100,64 +100,39 @@ MongoClient.connect(
       });
   
       });
-
+       // This allows us users to create accounts
       app.post("/signUp",  express.urlencoded({ extended: false }), function (req, res) {
         res.header("Access-Control-Allow-Origin", '*');
         res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
         res.header('Access-Control-Allow-Methods: POST');
         res.header('Access-Control-Allow-Credentials: true')
         let username = req.body.username;
+        // this hashes the passwords to protect information being leaked
         bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
         let hashedPwd = hash;
-        let newUser = { name: username, password: hashedPwd };
+        let newUser = { Username: username, password: hashedPwd };
+        // this finds if the username already exists within the database
         app
           .set("Webapp_Project")
           .collection("users")
           .find({ Username: username })
           .toArray(function (err, docs)
           { 
-            console.log(docs)
+            // if the returned docs has a length of 0, it means that an account with that username does not currently exist, so one can be created
             if (docs.length === 0){
           app
           .get("Webapp_Project")
           .collection("users")
           .insertOne(newUser, function (err, dbResp){
-          if (err) {
-            console.error(err);
-          } 
-          if (dbResp.insertedCount === 1) {
-            res.send('success');
-            console.log('not a duplicate')
-          }else {console.log(dbResp)
-            console.log(dbResp.insertedCount)
-            res.send('failed')
-          console.log('is a duplicate')
+          res.send({'response':'account created'})
           }
-            })} else {if (err) {
+            )} 
+            
+            else {if (err) {
                 console.error(err);
               }if (docs.length > 0) {
-                console.log('this user already exists')
+                res.send({'response':'this user already exists'})
                 }}})})})
-    //     app
-    //       .get("Webapp_Project")
-    //       .collection("users")
-    //       .insertOne(newUser, function (err, dbResp){
-    //       if (err) {
-    //         console.error(err);
-    //       } 
-    //       if (dbResp.insertedCount === 1) {
-    //         res.send('success');
-    //         console.log('not a duplicate')
-    //       }else {console.log(dbResp)
-    //         console.log(dbResp.insertedCount)
-    //         res.send('failed')
-    //       console.log('is a duplicate')
-    //       }
-          
-    //       }
-    //       )
-    //   })
-    // })
 
 
 //variables used in multiple functions, so have been placed outside to prevent block scoping issues

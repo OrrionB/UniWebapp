@@ -13,6 +13,8 @@ nextYear.setFullYear(current.getFullYear() + 1);
 
 const LoginFunction = (props) => {
 
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
   const [data, setData] = useState({
     username: "",
     password: "",
@@ -49,7 +51,15 @@ const LoginFunction = (props) => {
       },
       body: JSON.stringify(data)
       // if it recieves a response, the local cookies are set to be authorised, and the username is set here as well
-    }).then((response) => {console.log(response)})}
+    }).then((response) => 
+    response.json().then((response => { 
+      if (response.response === 'this user already exists')
+      {setSuccess(false)
+      setFailure(true)}
+      else {setSuccess(true)
+      setFailure(false)}}
+      )))}
+    
 //       cookies.set('authorised', true, { path: '/' , maxAge: 28800, httpOnly: false});
 //       cookies.set('username', data.username, {path: '/' , maxAge: 28800, httpOnly: false} )
 //       setUserIsAuthenticated(true);
@@ -91,6 +101,12 @@ const LoginFunction = (props) => {
             onChange={handleChange}
           /> 
           <input type="submit" name="submit" />
+          {failure && (
+        <h3> An account with this username already exists, please try again</h3>
+      )}
+      {success && (
+        <h3> Account successfully created</h3>
+      )}
         </form>
       )}
     </div>

@@ -64,16 +64,29 @@ if (authorised === 'true'){
       },
       body: JSON.stringify(data)
       // if it recieves a response, the local cookies are set to be authorised, and the username is set here as well
-    }).then((response) => {
+    }).then((response) => response.json().then((response => {
+      if (response.response === 'wrong username') {
+        setIncorrectPassword(false)
+        setIncorrectUsername(true)
+      } else {
+        if (response.response === 'wrong password'){
+        setIncorrectPassword(true)
+        setIncorrectUsername(false)
+      } else {
+        setIncorrectPassword(false)
+        setIncorrectUsername(false)
       cookies.set('authorised', true, { path: '/' , maxAge: 28800, httpOnly: false});
       cookies.set('username', data.username, {path: '/' , maxAge: 28800, httpOnly: false} )
       setUserIsAuthenticated(true);
+    }}
       }
-    )}
+    )))}
+
 //  when the log out button is pressed, the authorised cookie is removed
     const logout = () => {
       cookies.set('authorised', false, { path: '/', maxAge: 28800, httpOnly: false})
       setUserIsAuthenticated(false)
+      cookies.remove('username')
       authorised = false
     }
 
