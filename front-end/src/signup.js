@@ -59,17 +59,7 @@ const LoginFunction = (props) => {
       else {setSuccess(true)
       setFailure(false)}}
       )))}
-    
-//       cookies.set('authorised', true, { path: '/' , maxAge: 28800, httpOnly: false});
-//       cookies.set('username', data.username, {path: '/' , maxAge: 28800, httpOnly: false} )
-//       setUserIsAuthenticated(true);
-//       }
-//     )}
-// //  when the log out button is pressed, the authorised cookie is removed
-//     const logout = () => {
-//       cookies.set('authorised', false, { path: '/', maxAge: 28800, httpOnly: false})
-//       setUserIsAuthenticated(false)
-//       authorised = false
+   
     
 
   return (
@@ -78,12 +68,6 @@ const LoginFunction = (props) => {
       {/* <button onClick={sessionCheck}>validate me</button> */}
       <h1>Sign Up</h1>
       {/* If the correct information has been input, then the generator will appear */}
-      {(
-        <div>
-          <h1> Welcome {cookies.get('username')}!</h1>
-          <button > logout </button>
-        </div>
-      )}
       {(
         <form onSubmit={handleSubmit}>
           <input
