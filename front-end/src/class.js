@@ -20,7 +20,7 @@ const choosing = () => {
     <h1> Choose your class:</h1>
     <div class="custom-select">
       <select onChange={choosing} id='classOptions'>
-        <option selected="">{cookies.get('chosenClass').class}</option>
+        <option selected="">{cookies.get('chosenClass')}</option>
         <option value="1" id='Barbarian'>Barbarian</option>
         <option value="2"id='Bard'>Bard</option>
         <option value="3"id='Cleric'>Cleric</option>
