@@ -152,15 +152,6 @@ MongoClient.connect(
   }
 );
 
-// let chosenClass
-// let race;
-// let name;
-// let job;
-// let fact;
-// let fact2;
-// let fact3;
-// let stats
-
 
 app.post("/save",  express.urlencoded({ extended: false }), function (req, res) {
   res.header("Access-Control-Allow-Origin", '*');

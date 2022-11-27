@@ -5,7 +5,6 @@ const cookies = new Cookies();
 
 
 const Stats = (props) => {
-console.log(cookies.get('stats'))
     const [stat, setStats] = useState(cookies.get('stats'))
 
     const handleSubmit = (e) => {

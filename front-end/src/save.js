@@ -18,16 +18,6 @@ const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
 
 
   const handleSubmit = (event) => {
-    // let chosenClass = cookies.get('chosenClass'),
-    // race: cookies.get('race'),
-    // name: cookies.get('name'), 
-    // job: cookies.get('job'),
-    // fact: cookies.get('fact'),
-    // fact2: cookies.get('fact2'),
-    // fact3: cookies.get('fact3'),
-    // stats: cookies.get('stats'),
-    // username: cookies.get('username'
-
     let savedCharacter = ({
       class: cookies.get('chosenClass'),
       race: cookies.get('race'),
@@ -39,7 +29,6 @@ const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
       stats: cookies.get('stats'),
       username: cookies.get('username')
     })
-    console.log(savedCharacter)
     event.preventDefault();
     fetch("http://localhost:5000/save", {
       // mode: 'no-cors',
