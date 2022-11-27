@@ -99,7 +99,7 @@ MongoClient.connect(
     res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
     res.header('Access-Control-Allow-Methods: POST');
     res.header('Access-Control-Allow-Credentials: true')
-    username = req.body.username;
+    let username = req.body.username;
     let password = req.body.password;
     app
       .set("Webapp_Project")
@@ -107,7 +107,6 @@ MongoClient.connect(
       .find({ Username: username })
       .toArray(function (err, docs)
       {
-        console.error(err)
         if (docs.length === 0) {
           res.send({'response':'wrong username'});
         }
@@ -120,9 +119,7 @@ MongoClient.connect(
             if (!result) {res.send({'response':'wrong password'})} 
             else {
                 req.session.cookie.user = req.body.username
-                  let authorised = true
                   req.session.cookie.authorised = true
-                  let frontendSession = req.session
                   req.session.save(function (err) {
                   if (err) return next(err)
                   res.send({'response':'log in successful'}) 
@@ -159,7 +156,6 @@ app.post("/save",  express.urlencoded({ extended: false }), function (req, res) 
   res.header('Access-Control-Allow-Methods: POST');
   res.header('Access-Control-Allow-Credentials: true')
   let savedCharacter = req.body
-console.log(savedCharacter)
 res.send({'yay':'character saved'})
 
 });
