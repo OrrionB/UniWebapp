@@ -256,7 +256,6 @@ function GenPage() {
         <div>
           <Class />
         </div>
-
         <div>
           <Name />
         </div>
