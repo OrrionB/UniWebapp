@@ -117,7 +117,7 @@ let username = {username: cookies.get('username')}
     <div>
     <div class="custom-select">
       {userIsAuthenticated && <select onChange= {handleSubmit} id='characterOptions'>
-      <option selected="">choose a character to load</option>
+      <option selected="">Choose a character to load</option>
       {
         savedCharacters.map(character => (
           <option value ='' id={[character.class,character.race, character.name, character.job, character.username,'$',character.stats,'$',character.fact,'$', character.fact2,'$', character.fact3]} key={character.id}>{character.name}</option>
