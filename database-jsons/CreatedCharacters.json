@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "6383e50ed7b90c7bd3597df1"
+  },
+  "class": "Ranger",
+  "race": "Elf",
+  "name": "Aelar",
+  "job": "Domestic Servant",
+  "fact": "You once tried to make friends with a badger, but it didn't go very well...",
+  "fact2": "You can bench press two dwarves.",
+  "fact3": "You have never been told where meat comes from and would be deeply saddened if anyone dared tell you.",
+  "stats": [
+    13,
+    15,
+    10,
+    8,
+    14,
+    11
+  ],
+  "username": "Isaac"
+},{
+  "_id": {
+    "$oid": "6383efbbfbae3ad6fe525f09"
+  },
+  "class": "Cleric",
+  "race": "Human",
+  "name": "Biri",
+  "job": "Street seller",
+  "fact": "You have a fake treasure map that you believe leads to real treasure.",
+  "fact2": "You believe you are a skeleton that is in control of a meat suit. ",
+  "fact3": "No matter how hard you try, you will never be able to whistle.",
+  "stats": [
+    14,
+    9,
+    13,
+    12,
+    9,
+    15
+  ],
+  "username": "Isaac"
+},{
+  "_id": {
+    "$oid": "638499b5ba6f964e98ce9156"
+  },
+  "class": "Fighter",
+  "race": "Gnome",
+  "name": "Ellywick",
+  "job": "Tinker",
+  "fact": "You are incredibly clumsy. ",
+  "fact2": "You collect flowers and press them into tiny glass frames.",
+  "fact3": "You collect shiny rocks that you like from the ground.",
+  "stats": [
+    13,
+    9,
+    13,
+    12,
+    9,
+    11
+  ],
+  "username": "pee"
+},{
+  "_id": {
+    "$oid": "638499eaba6f964e98ce9157"
+  },
+  "class": "Cleric",
+  "race": "Half-Orc",
+  "name": "Liftrasa",
+  "job": "Saddler",
+  "fact": "You are obsessed with the feeling of cotton.",
+  "fact2": "You can solve a Rubik’s cube in under 2 minutes - blindfolded.",
+  "fact3": "You always carry a small plant in a glass bottle. ",
+  "stats": [
+    10,
+    14,
+    10,
+    4,
+    8,
+    11
+  ],
+  "username": "pee"
+}]
