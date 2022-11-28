@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const Fact2 = (props) => {
-  const [fact2, setFact2] = useState("");
+  const [fact2, setFact2] = useState(cookies.get('fact2'));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,6 +13,7 @@ const Fact2 = (props) => {
     }).then((response) => {
       response.json().then((json) => {
         setFact2(json.fact2);
+        cookies.set('fact2', json.fact2, { path: '/' , maxAge: 28800, httpOnly: false})
       });
     });
   };

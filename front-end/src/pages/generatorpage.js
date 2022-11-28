@@ -6,6 +6,9 @@ import Fact from "../funFact1";
 import Fact2 from "../funfact2";
 import Fact3 from "../funfact3";
 import Stats from "../stats";
+import Save from "../save"
+import Class from "../class"
+import Load from "../load"
 import barbarian from '../pages/classImages/barbarian.png';
 import bard from '../pages/classImages/bard.png';
 import cleric from '../pages/classImages/cleric.png';
@@ -20,6 +23,8 @@ import warlock from '../pages/classImages/warlock.png';
 import wizard from '../pages/classImages/wizard.png';
 
 function GenPage() {
+
+
   return (
     <div id="genDiv">
     <div id="desktop">
@@ -248,24 +253,9 @@ function GenPage() {
           </div>
         </div>
 
-          <h1> Choose your class:</h1>
-          <div class="custom-select">
-            <select>
-              <option selected="">Class:</option>
-              <option value="1">Barbarian</option>
-              <option value="2">Bard</option>
-              <option value="3">Cleric</option>
-              <option value="4">Druid</option>
-              <option value="5">Fighter</option>
-              <option value="6">Monk</option>
-              <option value="7">Paladin</option>
-              <option value="8">Ranger</option>
-              <option value="9">Rogue</option>
-              <option value="10">Sorcerer</option>
-              <option value="11">Warlock</option>
-              <option value="12">Wizard</option>
-            </select>
-          </div>
+        <div>
+          <Class />
+        </div>
 
         <div>
           <Name />
@@ -288,6 +278,15 @@ function GenPage() {
         <div>
           <Stats />
         </div>
+        <div>
+          <Load />
+        </div>
+        <div>
+          <Save />
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
   </div>
     );
   }

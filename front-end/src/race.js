@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const Race = (props) => {
-  const [race, setRace] = useState("");
+  const [race, setRace] = useState(cookies.get('race'));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +14,7 @@ const Race = (props) => {
     }).then((response) => {
       response.json().then((json) => {
         setRace(json.race);
+        cookies.set('race', json.race, { path: '/' , maxAge: 28800, httpOnly: false})
       });
     });
   };

@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const Job = (props) => {
-  const [job, setJob] = useState("");
+  const [job, setJob] = useState(cookies.get('job'));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +14,8 @@ const Job = (props) => {
     }).then((response) => {
       response.json().then((json) => {
         setJob(json.job);
+        cookies.set('job', json.job, { path: '/' , maxAge: 28800, httpOnly: false})
+      
       });
     });
   };
