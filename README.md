@@ -50,10 +50,12 @@ In **Webapp_Project** please create the following collections:  (All start with 
 1. **`FunFacts`**
 2. **`JobTitles`**
 3. **`Names`**
-4. **`Races`**  
-5. **`users`**
+4. **`Races`** 
+5. **`CreatedCharacters`** 
+6. **`users`**
+
   
-  Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo.
+  Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo. The folders `CreatedCharacters` and `users` should be left empty.
 
 ---
 
@@ -62,7 +64,9 @@ In **Webapp_Project** please create the following collections:  (All start with 
 2. In the terminal window that is in the directory where you cloned the app, run the command `node index.js`.
 3. In the terminal window that is in the **front-end** folder, run the command `npm start`.
 4. The app should then initialise, however if it does not - go to 'http://localhost:3000' in your browser.
-5. Enjoy generating your character!
+5. Use the sign up page to create your username and password.
+6. Use the login page with the username and password you have just created in order to see the save function on the generator page.
+5. Enjoy generating your characters!
 
 ---
 ## Development Team
