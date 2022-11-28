@@ -43,7 +43,7 @@ const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
 
   return (
     <div>
-        {userIsAuthenticated && <button onClick = {handleSubmit}> save </button>}
+        {userIsAuthenticated && <button onClick = {handleSubmit}> Save Character </button>}
     </div>
   );
 };
