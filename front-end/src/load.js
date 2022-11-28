@@ -84,7 +84,6 @@ async function fetchRacesHandler() {
   return (
     <div>
     <div>
-    <h1> Choose your class:</h1>
     <div class="custom-select">
       {userIsAuthenticated && <select onChange= {handleSubmit} id='characterOptions'>
       <option selected="">choose a character to load</option>
