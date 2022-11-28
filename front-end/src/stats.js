@@ -5,6 +5,10 @@ const cookies = new Cookies();
 
 
 const Stats = (props) => {
+if (cookies.get('stats') === undefined){
+        cookies.set('stats','', { path: '/' , maxAge: 28800, httpOnly: false})
+    }
+
     const [stat, setStats] = useState(cookies.get('stats'))
 
     const handleSubmit = (e) => {
