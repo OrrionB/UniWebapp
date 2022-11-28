@@ -70,6 +70,12 @@ input {
   padding:4px;
 }
 
+#SignUpBox {
+  padding:4px;
+}
+
+
+
 #headerBar {
   background-color: #04a795;
   width:100%;
@@ -117,6 +123,18 @@ nav ul li a {
 }
 
 #loginSection {
+  margin: 2%;
+  border-color: #efdec6;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: thick;
+  box-shadow: 2px 2px 5px #fb5947;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+#SignUpSection {
   margin: 2%;
   border-color: #efdec6;
   border-style: solid;
@@ -346,6 +364,18 @@ select {
     flex-direction: column;
   }
   
+  #SignUpSection {
+    margin: 2%;
+    border-color: #efdec6;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: thick;
+    box-shadow: 2px 2px 5px #fb5947;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
   #aboutTitle {
     margin-bottom: 0;
   }

@@ -7,7 +7,7 @@ import Home from './pages/homepage';
 import LoginPage from './pages/loginpage';
 import GenPage from './pages/generatorpage';
 import NoPage from './pages/NoPage';
-// import SignUpPage from '.page/SignUpPage';
+import SignUpPage from './pages/signuppage';
 import './pages/index.css';
 
 export default function App () {
@@ -20,7 +20,7 @@ return (
         <Route index element={<Home />} />
         <Route path="Login" element={<LoginPage/>} />
         <Route path="Generator" element={<GenPage/>} />
-        {/* <Route path="SignUp" element={<SignUpPage/>} /> */}
+        <Route path="SignUp" element={<SignUpPage/>} />
         <Route path="*" element={<NoPage/>} />
       </Route>
     </Routes>

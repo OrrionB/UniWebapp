@@ -4,6 +4,7 @@ const app = express();
 const port = 5000;
 const path = require("path")
 const bcrypt = require("bcrypt");
+const saltRounds = 10
 
 const MongoClient = require("mongodb").MongoClient;
 
@@ -27,7 +28,7 @@ app.use(
 
 const sessions = require("express-session");
 const MongoStore = require("connect-mongo")(sessions)
-
+let username
 // Basic usage
 // this gives out the session to people
 const oneDay = 1000 * 60 * 60 * 24
@@ -57,14 +58,47 @@ MongoClient.connect(
     app.set("Webapp_Project", client.db("Webapp_Project"));
   }
 );
+      // // This allows us users to create accounts
+      app.post("/signUp",  express.urlencoded({ extended: false }), function (req, res) {
+        res.header("Access-Control-Allow-Origin", '*');
+        res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+        res.header('Access-Control-Allow-Methods: POST');
+        res.header('Access-Control-Allow-Credentials: true')
+        let newUsername = req.body.username;
+        // this hashes the passwords to protect information being leaked
+        bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
+        let hashedPwd = hash;
+        let newUser = { Username: newUsername, password: hashedPwd };
+        // this finds if the username already exists within the database
+         app
+          .set("Webapp_Project")
+          .collection("users")
+          .find({ Username: newUsername,  })
+          .toArray(function (err, docs)
+          { 
+            // if the returned docs has a length of 0, it means that an account with that username does not currently exist, so one can be created
+            if (docs.length === 0){
+          app
+          .get("Webapp_Project")
+          .collection("users")
+          .insertOne(newUser, function (err, dbResp){
+          res.send({'response':'account created'})
+          }
+           )}
 
-//  POST /login to verify customer details
+           else {if (err) {
+                console.error(err);
+              }if (docs.length > 0) {
+                res.send({'response':'this user already exists'})
+                }}})})})
+
+
+  //  POST /login to verify customer details
   app.post("/login",  express.urlencoded({ extended: false }), function (req, res) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
     res.header('Access-Control-Allow-Methods: POST');
     res.header('Access-Control-Allow-Credentials: true')
-    console.log(req.sessionID)
     let username = req.body.username;
     let password = req.body.password;
     app
@@ -73,62 +107,43 @@ MongoClient.connect(
       .find({ Username: username })
       .toArray(function (err, docs)
       {
-        if (err) {
-          console.error(err);
+        if (docs.length === 0) {
+          res.send({'response':'wrong username'});
         }
         if (docs.length > 0) {
-          
-          
           ///////
-          bcrypt.compare(req.body.password, docs[0].Password, function (
+          bcrypt.compare(req.body.password, docs[0].password, function (
             err,
             result
-          ) {
-            if (req.body.password == docs[0].Password){
+          ) { 
+            if (!result) {res.send({'response':'wrong password'})} 
+            else {
                 req.session.cookie.user = req.body.username
-                  let authorised = true
                   req.session.cookie.authorised = true
-                  let frontendSession = req.session
                   req.session.save(function (err) {
                   if (err) return next(err)
-                  res.send(true) 
-                  console.log(req.sessionID)
+                  res.send({'response':'log in successful'}) 
                   })
                 
             }
           });
         } 
-      });
-  
-      });
+      });})
 
-
-//variables used in multiple functions, so have been placed outside to prevent block scoping issues
-let incorrectPassword = false;
-let userExistsInDb = false;
-
-const userIsValid = (requestUsername, requestPassword) => {
-  // check if the request username exists in the DB
-  userExistsInDb = requestUsername in realData;
-  if (userExistsInDb) {
-    //it exists in the database
-    const user = realData[requestUsername];
-    if (user.password === requestPassword) {
-      incorrectPassword = false;
-      // the password is not incorrect
-      return true;
-    } else {
-      // the password inputted is incorrect
-      incorrectPassword = true;
-      return false;
-    }
-  } else {
-    //username inputted is incorrect
-    return false;
-  }
-  // validate the password
-};
-
+      app.get("/load",  express.urlencoded({ extended: false }), function (req, res) {
+        res.header("Access-Control-Allow-Origin", '*');
+        res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+        res.header('Access-Control-Allow-Methods: POST');
+        res.header('Access-Control-Allow-Credentials: true')
+        app
+          .set("Webapp_Project")
+          .collection("CreatedCharacters")
+          .find({ Username: username })
+          .toArray(function (err, docs)
+          {
+            if (docs.length === 0) {
+              res.send({'response':"no saved character"});
+            } else res.send({docs})})})
 
 
 // Connect to MongoDB
@@ -150,13 +165,53 @@ MongoClient.connect(
 );
 
 
+app.post("/save",  express.urlencoded({ extended: false }), function (req, res) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+  res.header('Access-Control-Allow-Methods: POST');
+  res.header('Access-Control-Allow-Credentials: true')
+  let savedCharacter = req.body
+  let chosenClass = req.body.class
+  let chosenRace = req.body.race
+  let chosenName = req.body.name
+  let chosenJob = req.body.job
+  let chosenFact = req.body.fact
+  let chosenFact2 = req.body.fact2
+  let chosenFact3 = req.body.fact3
+  let chosenStats = req.body.stats
+  let username = req.body.username
+  console.log(req.body)
+  app
+          .set("Webapp_Project")
+          .collection("CreatedCharacters")
+          .find({ username: username, race: chosenRace, name: chosenName, class: chosenClass, job: chosenJob, fact: chosenFact, fact2: chosenFact2, fact3: chosenFact3, stats: chosenStats })
+          .toArray(function (err, docs)
+          { 
+            // if the returned docs has a length of 0, it means that an account with that username does not currently exist, so one can be created
+            if (docs.length === 0){
+          app
+          .get("Webapp_Project")
+          .collection("CreatedCharacters")
+          .insertOne(savedCharacter, function (err, dbResp){
+          res.send({'response':'character saved'})
+          }
+           )
+        } else {
+          res.send({'response':'character already exists'})
+        }
+      
+      })})
+// }
+
+
+
 
 //Get request for Name Generator
 app.get("/name", async (req, res) => {
   
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let name;
+  let name
   MongoClient.connect(
     url,
     {
@@ -186,11 +241,13 @@ app.get("/name", async (req, res) => {
   );
 });
 
+
+
 // get request for Race Generator
 app.get("/Race", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let race;
+  let race
   MongoClient.connect(
     url,
     {
@@ -255,7 +312,7 @@ app.get("/job", async (req, res) => {
 app.get("/facts", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let fact;
+  let fact
   MongoClient.connect(
     url,
     {
@@ -320,7 +377,7 @@ app.get("/fact2", async (req, res) => {
 app.get("/fact3", async (req, res) => {
   const MongoClient = require("mongodb").MongoClient;
   const url = "mongodb://127.0.0.1:27017";
-  let fact3;
+  let fact3
   MongoClient.connect(
     url,
     {
@@ -339,6 +396,7 @@ app.get("/fact3", async (req, res) => {
           { $sample: { size: 1 } },
         ]);
         for await (const doc of fact3Result) {
+          fact3 = doc.FunFact
           res.send({ fact3: doc.FunFact });
           Promise.resolve(doc.FunFact);
         }
