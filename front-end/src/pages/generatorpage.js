@@ -8,6 +8,7 @@ import Fact3 from "../funfact3";
 import Stats from "../stats";
 import Save from "../save"
 import Class from "../class"
+import Load from "../load"
 import barbarian from '../pages/classImages/barbarian.png';
 import bard from '../pages/classImages/bard.png';
 import cleric from '../pages/classImages/cleric.png';
@@ -278,8 +279,14 @@ function GenPage() {
           <Stats />
         </div>
         <div>
+          <Load />
+        </div>
+        <div>
           <Save />
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
   </div>
     );
   }

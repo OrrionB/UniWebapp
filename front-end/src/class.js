@@ -6,8 +6,7 @@ const cookies = new Cookies();
 const Class = (props) => {
 
 const choosing = () => {
-  let
-  classIndex = document.getElementById('classOptions').selectedIndex
+  let classIndex = document.getElementById('classOptions').selectedIndex
   let chosenClass = document.getElementById('classOptions').options[classIndex].id
   cookies.set('chosenClass', chosenClass, { path: '/' , maxAge: 28800, httpOnly: false})
 
