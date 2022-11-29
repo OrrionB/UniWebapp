@@ -5,7 +5,7 @@ function LoginPage() {
 
     return (
       <div>
-         <div id="loginSection">
+         <div class="sectionBorder" id="loginSection">
           <Login />
         </div>
 
