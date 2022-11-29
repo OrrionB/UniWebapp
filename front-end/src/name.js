@@ -4,6 +4,11 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 const Name = (props) => {
+
+  if (cookies.get('name') === undefined){
+    cookies.set('name','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+
   const [name, setName] = useState(cookies.get('name'));
   
 

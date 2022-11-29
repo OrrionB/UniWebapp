@@ -145,6 +145,58 @@ MongoClient.connect(
               res.send({'response':"no saved character"});
             } else res.send({docs})})})
 
+      app.post("/load",  express.urlencoded({ extended: false }), function (req, res) {
+        res.header("Access-Control-Allow-Origin", '*');
+        res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+        res.header('Access-Control-Allow-Methods: POST');
+        res.header('Access-Control-Allow-Credentials: true')
+        let chosenClass = req.body.class
+        let chosenRace = req.body.race
+        let chosenName = req.body.name
+        let chosenJob = req.body.job
+        let chosenFact = req.body.fact
+        let chosenFact2 = req.body.fact2
+        let chosenFact3 = req.body.fact3
+        let chosenStats = req.body.stats
+        let username = req.body.username
+        // console.log(req.body)
+        
+      app
+          .set("Webapp_Project")
+          .collection("CreatedCharacters")
+          .find({ username: username, race: chosenRace, name: chosenName, class: chosenClass, job: chosenJob, fact: chosenFact, fact2: chosenFact2, fact3: chosenFact3, stats: chosenStats})
+          .toArray(function (err, docs)
+          {
+            if (docs.length === 0) {
+              res.send({'response':"no saved character"});
+                } else res.send({docs})})})
+
+  app.post("/load",  express.urlencoded({ extended: false }), function (req, res) {
+        res.header("Access-Control-Allow-Origin", '*');
+        res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+        res.header('Access-Control-Allow-Methods: POST');
+        res.header('Access-Control-Allow-Credentials: true')
+        let chosenClass = req.body.class
+        let chosenRace = req.body.race
+        let chosenName = req.body.name
+        let chosenJob = req.body.job
+        let chosenFact = req.body.fact
+        let chosenFact2 = req.body.fact2
+        let chosenFact3 = req.body.fact3
+        let chosenStats = req.body.stats
+        let username = req.body.username
+        // console.log(req.body)
+        
+      app
+          .set("Webapp_Project")
+          .collection("CreatedCharacters")
+          .find({ username: username, race: chosenRace, name: chosenName, class: chosenClass, job: chosenJob, fact: chosenFact, fact2: chosenFact2, fact3: chosenFact3, stats: chosenStats})
+          .toArray(function (err, docs)
+          {
+            if (docs.length === 0) {
+              res.send({'response':"no saved character"});
+                } else res.send({docs})})})
+
 
 // Connect to MongoDB
 MongoClient.connect(
@@ -164,6 +216,20 @@ MongoClient.connect(
   }
 );
 
+app.post("/preload",  express.urlencoded({ extended: false }), function (req, res) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Headers: Content-Type, Authorization");
+  res.header('Access-Control-Allow-Methods: POST');
+  res.header('Access-Control-Allow-Credentials: true')
+  let username = req.body.username
+  
+app
+    .set("Webapp_Project")
+    .collection("CreatedCharacters")
+    .find({ username: username})
+    .toArray(function (err, docs)
+    {res.send({docs})})})
+
 
 app.post("/save",  express.urlencoded({ extended: false }), function (req, res) {
   res.header("Access-Control-Allow-Origin", '*');
@@ -180,7 +246,18 @@ app.post("/save",  express.urlencoded({ extended: false }), function (req, res) 
   let chosenFact3 = req.body.fact3
   let chosenStats = req.body.stats
   let username = req.body.username
-  console.log(req.body)
+  characterArray = []
+
+    for(let i = 0; i < 9; i++) {
+      if (Object.values(req.body)[i] === undefined) { break; }
+      
+      characterArray.push(Object.values(req.body)[i])
+    }
+    if (characterArray.length !== 9 ) {
+      res.send({'response': 'please complete your character before saving'})
+    }else {
+
+  // console.log(req.body)
   app
           .set("Webapp_Project")
           .collection("CreatedCharacters")
@@ -200,7 +277,7 @@ app.post("/save",  express.urlencoded({ extended: false }), function (req, res) 
           res.send({'response':'character already exists'})
         }
       
-      })})
+      })}})
 // }
 
 

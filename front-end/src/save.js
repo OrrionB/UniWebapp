@@ -15,6 +15,9 @@ const Save = (props) => {
   }
 
 const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
+const [characterSaved, setCharacterSaved] = useState(false);
+const [alreadyExists, setAlreadyExists] = useState(false);
+const [pleaseComplete, setPleaseComplete] = useState(false);
 
 
   const handleSubmit = (event) => {
@@ -37,14 +40,31 @@ const [userIsAuthenticated, setUserIsAuthenticated] = useState(authorised);
       withCredentials: true
       },body: JSON.stringify(savedCharacter)
     }).then((response) => response.json().then((response => {
-  console.log(response)})))
+      if (response.response === 'character saved'){
+        setCharacterSaved(true)
+        setAlreadyExists(false)
+        setPleaseComplete(false)
+      } else if (response.response === 'character already exists'){
+        setCharacterSaved(false)
+        setAlreadyExists(true)
+        setPleaseComplete(false)
+      } else {
+        setCharacterSaved(false)
+        setAlreadyExists(false)
+        setPleaseComplete(true)
+      }
+})))
   }
 
 
   return (
     <div>
         {userIsAuthenticated && <button onClick = {handleSubmit}> save </button>}
+        <div>{characterSaved && <p3> Your character has been saved, reload the page to view it!</p3>}</div>
+        <div>{alreadyExists && <p3> Oops, looks like you already saved this character</p3>}</div>
+        <div>{pleaseComplete && <p3> randomise all parts of your character before saving!</p3>}</div>
     </div>
+    
   );
 };
 

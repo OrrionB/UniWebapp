@@ -3,6 +3,10 @@ import { useState } from "react";
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
+if (cookies.get('fact') === undefined){
+  cookies.set('fact','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+
 const Fact = (props) => {
   const [fact, setFact] = useState(cookies.get('fact'));
 
