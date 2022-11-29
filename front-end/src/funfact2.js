@@ -4,6 +4,10 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 const Fact2 = (props) => {
+  if (cookies.get('fact2') === undefined){
+    cookies.set('fact2','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+  
   const [fact2, setFact2] = useState(cookies.get('fact2'));
 
   const handleSubmit = (e) => {

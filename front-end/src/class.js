@@ -5,13 +5,20 @@ const cookies = new Cookies();
 
 const Class = (props) => {
 
+  if (cookies.get('chosenClass') === undefined){
+    cookies.set('chosenClass','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+
+console.log(cookies.get('chosenClass'))
+
+  
 const choosing = () => {
   let classIndex = document.getElementById('classOptions').selectedIndex
   let chosenClass = document.getElementById('classOptions').options[classIndex].id
   cookies.set('chosenClass', chosenClass, { path: '/' , maxAge: 28800, httpOnly: false})
 
-  console.log({'class':chosenClass})
-  console.log(cookies.get('chosenClass'))
+  // console.log({'class':chosenClass})
+  // console.log(cookies.get('chosenClass'))
      }
       
   return (
