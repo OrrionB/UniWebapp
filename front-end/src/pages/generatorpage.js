@@ -30,7 +30,7 @@ function GenPage() {
     <div id="desktop">
         <h1>The classes:</h1>
         <h4 id="taglineHover">Hover over each one to learn more about it, and then scroll down for the generator.</h4>
-        <h4 id="taglineClick">Click on each one to learn more about it, and then scroll down for the generator.</h4>
+        <h4 id="taglineClick">Hold each one to learn more about it, and then scroll down for the generator.</h4>
         <div class="row">
 
           <div class="column">
@@ -156,55 +156,19 @@ function GenPage() {
                 </div>
               </div>
 
-              <h2 class="classTitle">Fighter</h2>
-              <div class="container">
-              <img src={fighter} alt="Art of a fighter character"></img>
-                <div class="overlay">
-                  <div class="text"><p>What does a fighter do best? Well, fight of course. A really versatile class, as it can work in numerous ways. Add the fighting style and you can choose to have a one handed weapon accompanied by a shield, have a two handed weapon, two one handed ones (dual wielding), a ranged weapon and more! Once you’ve got that decided, ready yourself to start demolishing your foes, be it with your mighty strength or dexterous precision!</p></div>
-                </div>
-              </div>
-
-              <h2 class="classTitle">Rogue</h2>
-              <div class="container">
-              <img src={rogue} alt="Art of a rogue character"></img>
-                <div class="overlay">
-                  <div class="text"><p>Let’s get shady, grab a dagger and start stabbing. Rogues excel at sneaking around, scouting ahead, being dexterous and about everything you would expect a thief to be good at. In dungeons, they can help their party by deactivating traps or opening locked doors. Don’t expect them to wear much armor, nor be able to carry heavy stuff; but were your task to need some delicacy or swashbuckling, you’ve found the right person.</p></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <h2 class="classTitle">Bard</h2>
-              <div class="container">
-              <img src={bard} alt="Art of a bard character"></img>
-                <div class="overlay">
-                  <div class="text"><p>A true jack of all trades; a bard can cover great amounts of ground when speaking about what they are able to do. A performer at heart, an inspiration to its allies, but above all a foul-mouthed to its foes. With their great charisma, their voice becomes its greatest weapon.</p></div>
-                </div>
-              </div>
-
-              <h2 class="classTitle">Monk</h2>
-              <div class="container">
-              <img src={monk} alt="Art of a monk character"></img>
-                <div class="overlay">
-                  <div class="text"><p>Martial artists who can channel their Ki to do impressive feats as if they were magic users. No armor is necessary, just dexterity and the power of your mind. Deflect missiles thrown at you, changing the target to your enemies, move at the speed of the wind and fill your foes’ faces with a flurry blows.</p></div>
-                </div>
-              </div>
-
-              <h2 class="classTitle">Sorcerer</h2>
-              <div class="container">
-              <img src={sorcerer} alt="Art of a sorcerer character"></img>
-                <div class="overlay">
-                  <div class="text"><p>Due to some random or pre-established occurrence, magic runs through you. This means you can “cheat” in a certain way to be able to use magic at will, instead of having to learn how to cast it. Sorcerers are also equipped with a pool of magic they get their sorcery points from, letting them twist spells to their will in different ways.</p></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
               <h2 class="classTitle">Cleric</h2>
               <div class="container">
               <img src={cleric} alt="Art of a cleric character"></img>
                 <div class="overlay">
                   <div class="text"><p>As well as with bards, clerics cover a wide amount of possibilities depending on the god you choose to follow. They are high spirited servants of their deities and follow their domains to choose a way of life. Both a warrior and spellcaster, they are able to cover practically any role in a party. Depending on their subclass, their Channel Divinity ability acts in different ways, granting direct powers from their gods.</p></div>
+                </div>
+              </div>
+
+              <h2 class="classTitle">Fighter</h2>
+              <div class="container">
+              <img src={fighter} alt="Art of a fighter character"></img>
+                <div class="overlay">
+                  <div class="text"><p>What does a fighter do best? Well, fight of course. A really versatile class, as it can work in numerous ways. Add the fighting style and you can choose to have a one handed weapon accompanied by a shield, have a two handed weapon, two one handed ones (dual wielding), a ranged weapon and more! Once you’ve got that decided, ready yourself to start demolishing your foes, be it with your mighty strength or dexterous precision!</p></div>
                 </div>
               </div>
 
@@ -216,7 +180,16 @@ function GenPage() {
                 </div>
               </div>
 
-              <h2 class="classTitle">Warlock</h2>
+              <h2 class="classTitle">Rogue</h2>
+              <div class="container">
+              <img src={rogue} alt="Art of a rogue character"></img>
+                <div class="overlay">
+                  <div class="text"><p>Let’s get shady, grab a dagger and start stabbing. Rogues excel at sneaking around, scouting ahead, being dexterous and about everything you would expect a thief to be good at. In dungeons, they can help their party by deactivating traps or opening locked doors. Don’t expect them to wear much armor, nor be able to carry heavy stuff; but were your task to need some delicacy or swashbuckling, you’ve found the right person.</p></div>
+                </div>
+              </div>
+            
+
+            <h2 class="classTitle">Warlock</h2>
               <div class="container">
               <img src={warlock} alt="Art of a warlock character"></img>
                 <div class="overlay">
@@ -225,7 +198,17 @@ function GenPage() {
               </div>
             </div>
 
+
+
             <div class="column">
+              <h2 class="classTitle">Bard</h2>
+              <div class="container">
+              <img src={bard} alt="Art of a bard character"></img>
+                <div class="overlay">
+                  <div class="text"><p>A true jack of all trades; a bard can cover great amounts of ground when speaking about what they are able to do. A performer at heart, an inspiration to its allies, but above all a foul-mouthed to its foes. With their great charisma, their voice becomes its greatest weapon.</p></div>
+                </div>
+              </div>
+
               <h2 class="classTitle">Druid</h2>
               <div class="container">
               <img src={druid} alt="Art of a druid character"></img>
@@ -234,11 +217,27 @@ function GenPage() {
                 </div>
               </div>
 
+              <h2 class="classTitle">Monk</h2>
+              <div class="container">
+              <img src={monk} alt="Art of a monk character"></img>
+                <div class="overlay">
+                  <div class="text"><p>Martial artists who can channel their Ki to do impressive feats as if they were magic users. No armor is necessary, just dexterity and the power of your mind. Deflect missiles thrown at you, changing the target to your enemies, move at the speed of the wind and fill your foes’ faces with a flurry blows.</p></div>
+                </div>
+              </div>
+
               <h2 class="classTitle">Ranger</h2>
               <div class="container">
               <img src={ranger} alt="Art of a ranger character"></img>
                 <div class="overlay">
                   <div class="text"><p>A natural explorer seeking adventures, who on their way found a special hatred towards a certain beast or monster. Able to master any fighting style as long as they don’t involve heavy weapons or armor. Spellcasters by default, due to their connection with nature and/or the Feywild, they are excellent scouts and allies to have by your side.</p></div>
+                </div>
+              </div>
+
+              <h2 class="classTitle">Sorcerer</h2>
+              <div class="container">
+              <img src={sorcerer} alt="Art of a sorcerer character"></img>
+                <div class="overlay">
+                  <div class="text"><p>Due to some random or pre-established occurrence, magic runs through you. This means you can “cheat” in a certain way to be able to use magic at will, instead of having to learn how to cast it. Sorcerers are also equipped with a pool of magic they get their sorcery points from, letting them twist spells to their will in different ways.</p></div>
                 </div>
               </div>
 
@@ -252,6 +251,7 @@ function GenPage() {
             </div>
           </div>
         </div>
+        
 
         <div>
           <Class />

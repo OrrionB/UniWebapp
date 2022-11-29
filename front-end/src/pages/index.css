@@ -14,10 +14,6 @@ body {
   padding-bottom: 50px;
 }
 
-.logged-in #loginSavePrompt {
-  display: none !important;
-}
-
 input[type="submit" i] {
   color: white;
   background-color: #630d6f;
@@ -40,7 +36,7 @@ button {
   margin: 0.55%;
 }
 
-#error {
+#error404Page {
   padding:70px;
 }
 
@@ -91,8 +87,6 @@ input {
 #SignUpBox {
   padding:4px;
 }
-
-
 
 #headerBar {
   background-color: #04a795;
@@ -238,10 +232,6 @@ nav ul li a {
   overflow-y:auto;
 }
 
-h4 {
-  margin: 1px;
-}
-
 .custom-select {
   position: relative;
   padding-top: 4px;
@@ -261,11 +251,6 @@ select {
 }
 }
 
-#genPageDive {
-  z-index: 0;
-}
-
-
 /* For mobile view */
 
 @media only screen and (max-width: 600px) {
@@ -281,6 +266,7 @@ select {
     text-align: center;
     margin: 0px;
     padding-top: 7px;
+
   }
   
   input[type="submit" i] {
@@ -328,7 +314,7 @@ select {
     top: 0;
     padding: 2px;
     margin: 0px;
-    height: 58px;
+    height: 7vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -338,14 +324,18 @@ select {
   #logos {
     position: relative;
     align-items:center;
+    padding-top: 3vh;
   }
   
   ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    top: -100px;
-    padding-right: 25%;
+    margin: none !important;
+    margin-top: 5.5vh;
+    position: fixed;
+    z-index: 3;
+    padding: none;
   }
   
   li {
@@ -355,7 +345,6 @@ select {
   nav ul li a {
     text-decoration: none;
     color: black;
-    align-items: center;
   }
   
   #aboutSection {
@@ -419,7 +408,7 @@ select {
 
 .column {
   padding: 0 4px;
-  max-width: 20%;
+  max-width: 40%;
 }
 
 .classTitle {
@@ -433,7 +422,7 @@ select {
   border-style: solid;
   border-radius: 25px;
   position:relative;
-  height:150px;
+  height:250px;
   object-fit:contain;
   z-index:-1;
 }
@@ -453,33 +442,47 @@ select {
 }
 
 .overlay {
-  position: center;
-  height: 150px;
-  width: 300%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
   border-style: solid;
   border-color: #efdec6;
   z-index:-1;
 }
 
-.container:onClick .overlay {
+.container:active .overlay {
   opacity: 1;
 }
 
 .text {
   color: #000000;
-  font-size: 17px;
+  font-size: 2.8vw;
   position: absolute;
   width: 96%;
-  height: 150px;
+  height: 250px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+
+select {
+  font-size: 18px;
+  border-color: #630d6f;
+  border-radius: 25px;
+  padding: 10px;
+  font-style: inherit;
 }
 }
