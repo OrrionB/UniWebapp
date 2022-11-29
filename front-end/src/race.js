@@ -4,6 +4,11 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 const Race = (props) => {
+
+  if (cookies.get('race') === undefined){
+    cookies.set('race','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+
   const [race, setRace] = useState(cookies.get('race'));
 
   const handleSubmit = (e) => {

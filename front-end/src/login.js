@@ -87,6 +87,14 @@ if (authorised === 'true'){
       cookies.set('authorised', false, { path: '/', maxAge: 28800, httpOnly: false})
       setUserIsAuthenticated(false)
       cookies.remove('username')
+      cookies.set('chosenClass', '', { path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('race', '', { path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('name', '', { path: '/' , maxAge: 28800, httpOnly: false}) 
+  cookies.set('job', '' ,{ path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('fact', '', { path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('fact2', '', { path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('fact3', '', { path: '/' , maxAge: 28800, httpOnly: false})
+  cookies.set('stats', '', { path: '/' , maxAge: 28800, httpOnly: false})
       authorised = false
     }
 

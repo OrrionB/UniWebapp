@@ -4,6 +4,11 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 const Job = (props) => {
+
+  if (cookies.get('job') === undefined){
+    cookies.set('job','', { path: '/' , maxAge: 28800, httpOnly: false})
+}
+
   const [job, setJob] = useState(cookies.get('job'));
 
   const handleSubmit = (e) => {
