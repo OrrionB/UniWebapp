@@ -29,8 +29,8 @@ function GenPage() {
     <div id="genDiv">
     <div id="desktop">
         <h1>The classes:</h1>
-        <h4 id="taglineHover">Hover over each one to learn more about it.</h4>
-        <h4 id="taglineClick">Click on each one to learn more about it.</h4>
+        <h4 id="taglineHover">Hover over each one to learn more about it, and then scroll down for the generator.</h4>
+        <h4 id="taglineClick">Click on each one to learn more about it, and then scroll down for the generator.</h4>
         <div class="row">
 
           <div class="column">
