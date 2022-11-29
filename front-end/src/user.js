@@ -21,7 +21,7 @@ const User = (props) => {
 
   return (
     <div>
-      <div><h1>user</h1><br/> <h3>{user}</h3></div>
+      <div><h1>User</h1><br/> <h3>{user}</h3></div>
       <form onSubmit={handleSubmit}>
         <input
           type="submit"

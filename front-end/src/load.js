@@ -86,7 +86,7 @@ async function fetchRacesHandler() {
     <div>
     <div class="custom-select">
       {userIsAuthenticated && <select onChange= {handleSubmit} id='characterOptions'>
-      <option selected="">choose a character to load</option>
+      <option id="loadCharacterDropdown" selected="">Choose a character to load</option>
       {
         savedCharacters.map(character => (
           <option value ='' id={character.name} key={character.id}>{character.name}</option>
