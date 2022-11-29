@@ -3,7 +3,7 @@ import React from 'react';
 function Home() {
     return (
       <div>
-        <div id="aboutSection">
+        <div class="sectionBorder" id="aboutSection">
           <h1 id="aboutTitle">About GenPC:</h1>
           <p id="aboutPara">GenPC is designed to help you create fantasy characters. Whether these characters are NPC's or the basis for 
           a more detailed and fully formed character for your table top RPG, that is up to you. Click the button below to find out about each of 
