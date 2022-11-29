@@ -59,10 +59,11 @@ const [pleaseComplete, setPleaseComplete] = useState(false);
 
   return (
     <div>
-        {userIsAuthenticated && <button onClick = {handleSubmit}> save </button>}
         <div>{characterSaved && <p3> Your character has been saved, reload the page to view it!</p3>}</div>
         <div>{alreadyExists && <p3> Oops, looks like you already saved this character</p3>}</div>
         <div>{pleaseComplete && <p3> randomise all parts of your character before saving!</p3>}</div>
+        {!userIsAuthenticated && <h4>Login to save and load your characters.</h4>}
+        {userIsAuthenticated && <button onClick = {handleSubmit}> Save Character </button>}
     </div>
     
   );

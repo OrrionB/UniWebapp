@@ -107,7 +107,7 @@ if (authorised === 'true'){
       {userIsAuthenticated && (
         <div>
           <h1> Welcome {cookies.get('username')}!</h1>
-          <button onClick={logout}> logout </button>
+          <button onClick={logout}> Logout </button>
         </div>
       )}
       {!userIsAuthenticated && (
