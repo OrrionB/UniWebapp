@@ -2,10 +2,10 @@
   
 ## Pre-Requisites  
 This readme assumes that you have the following programmes installed:
-- IDE e.g. VS Code
-- MongoDB Compass
-- Node (version 19.0.1)
-- Git
+- IDE e.g. VS Code (https://code.visualstudio.com/)
+- MongoDB & MongoDB Compass (https://www.mongodb.com/try/download/community, https://www.mongodb.com/products/compass)
+- Node (version 19.0.1) (node version manager can be installed here: https://github.com/nvm-sh/nvm#installing-and-updating)
+- Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 **PLEASE NOTE:**
 
@@ -55,7 +55,7 @@ In **Webapp_Project** please create the following collections:  (All start with 
 6. **`users`**
 
   
-  Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo. The folders `CreatedCharacters` and `users` should be left empty.
+  Into these collections, you can import the corresponding named JSON file from the **`database-jsons`** folder that was included in the repo. The collections `CreatedCharacters` and `users` should be left empty.
 
 ---
 
