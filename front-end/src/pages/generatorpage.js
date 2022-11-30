@@ -283,6 +283,9 @@ function GenPage() {
         <div>
           <Save />
         </div>
+        <div>
+          <p3> All images are copyrighted by <a href="https://dnd.wizards.com/race">Wizards of the Coast</a></p3>
+        </div>
         <br></br>
         <br></br>
         <br></br>

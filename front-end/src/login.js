@@ -122,9 +122,9 @@ if (authorised === 'true'){
         </form>
       )}
        {/* if an incorrect password has been input, then this prompt will appear */}
-       {incorrectPassword && <p1> Sorry, your password is incorrect. Please try again. </p1>}
+       {incorrectPassword && <p1> Sorry, your username or password is incorrect. Please try again. </p1>}
       {/* if an incorrect username has been input, then this prompt will */}
-      {incorrectUsername && <p1> Sorry, your username is incorrect. Please try again. </p1>}
+      {incorrectUsername && <p1> Sorry, your username or password is incorrect. Please try again. </p1>}
     </div>
   );
 };
